@@ -1,0 +1,7 @@
+gobgp global rib add 30.1.0.0/24
+gobgp global rib add 40.1.0.0/24 nexthop 30.1.0.0
+
+---------
+python ./add_prefix.py 192.168.0.2 30.1.0.0/24 0.0.0.0
+python ./add_prefix.py 192.168.0.2 40.1.0.0/24 30.1.0.1
+

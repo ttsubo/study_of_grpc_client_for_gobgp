@@ -1,0 +1,9 @@
+gobgp vrf add customerA rd 65001:101 rt both 65001:101
+gobgp vrf customerA rib add 30.1.0.0/24
+gobgp vrf customerA rib add 40.1.0.0/24 nexthop 30.1.0.1
+
+---------
+python ./add_vrf.py 192.168.0.2 customerA 65001:101 65001:101 65001:101
+python ./add_prefix.py 192.168.0.2 customerA 30.1.0.0/24 0.0.0.0
+python ./add_prefix.py 192.168.0.2 customerA 40.1.0.0/24 30.1.0.1
+
