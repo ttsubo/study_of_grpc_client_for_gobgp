@@ -4,13 +4,16 @@ from ryu.lib.packet.bgp import BGPTwoOctetAsRD
 from ryu.lib.packet.bgp import BGPTwoOctetAsSpecificExtendedCommunity
 from ryu.lib.packet.bgp import _RouteDistinguisher
 from ryu.lib.packet.bgp import _ExtendedCommunity
+from grpc.beta import implementations
 
 
 _TIMEOUT_SECONDS = 10
 Operation_DEL = 1
 
 def run(gobgpd_addr, vrf_name, route_dist, import_rt, export_rt):
-    with gobgp_pb2.early_adopter_create_GobgpApi_stub(gobgpd_addr, 8080) as stub:
+    channel = implementations.insecure_channel(gobgpd_addr, 50051)
+    with gobgp_pb2.beta_create_GobgpApi_stub(channel) as stub:
+
         bin_rd = str_to_bin_for_rd(route_dist)
         import_rts = []
         bin_import_rt = str_to_bin_for_rd(import_rt)
@@ -22,9 +25,9 @@ def run(gobgpd_addr, vrf_name, route_dist, import_rt, export_rt):
 
         vrf = {}
         vrf['name'] = vrf_name
-        vrf['rd'] = str(bin_rd)
-        vrf['import_rt'] = import_rts
-        vrf['export_rt'] = export_rts
+#        vrf['rd'] = str(bin_rd)
+#        vrf['import_rt'] = import_rts
+#        vrf['export_rt'] = export_rts
 
         ret = stub.ModVrf(gobgp_pb2.ModVrfArguments(operation=Operation_DEL, vrf=vrf), _TIMEOUT_SECONDS)
         if ret.code == 0:

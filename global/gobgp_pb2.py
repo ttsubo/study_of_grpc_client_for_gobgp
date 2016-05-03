@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='gobgp.proto',
   package='gobgpapi',
   syntax='proto3',
-  serialized_pb=_b('\n\x0bgobgp.proto\x12\x08gobgpapi\"a\n\x05\x45rror\x12\'\n\x04\x63ode\x18\x01 \x01(\x0e\x32\x19.gobgpapi.Error.ErrorCode\x12\x0b\n\x03msg\x18\x02 \x01(\t\"\"\n\tErrorCode\x12\x0b\n\x07SUCCESS\x10\x00\x12\x08\n\x04\x46\x41IL\x10\x01\"K\n\tArguments\x12$\n\x08resource\x18\x01 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\n\n\x02rf\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\"e\n\x10ModPathArguments\x12$\n\x08resource\x18\x01 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x1d\n\x05paths\x18\x03 \x03(\x0b\x32\x0e.gobgpapi.Path\"\xeb\x01\n\x0fPolicyArguments\x12$\n\x08resource\x18\x01 \x01(\x0e\x32\x12.gobgpapi.Resource\x12&\n\toperation\x18\x02 \x01(\x0e\x32\x13.gobgpapi.Operation\x12\x18\n\x10neighbor_address\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x35\n\x11policy_definition\x18\x06 \x01(\x0b\x32\x1a.gobgpapi.PolicyDefinition\x12+\n\x0c\x61pply_policy\x18\x07 \x01(\x0b\x32\x15.gobgpapi.ApplyPolicy\"l\n\x0cMrtArguments\x12$\n\x08resource\x18\x01 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\n\n\x02rf\x18\x02 \x01(\r\x12\x10\n\x08interval\x18\x03 \x01(\x04\x12\x18\n\x10neighbor_address\x18\x04 \x01(\t\"U\n\x0fModVrfArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12\x1a\n\x03vrf\x18\x02 \x01(\x0b\x32\r.gobgpapi.Vrf\"\xb9\x01\n\x04Path\x12\x0c\n\x04nlri\x18\x01 \x01(\x0c\x12\x0e\n\x06pattrs\x18\x02 \x03(\x0c\x12\x0b\n\x03\x61ge\x18\x03 \x01(\x03\x12\x0c\n\x04\x62\x65st\x18\x04 \x01(\x08\x12\x13\n\x0bis_withdraw\x18\x05 \x01(\x08\x12\x12\n\nvalidation\x18\x06 \x01(\x05\x12\x1c\n\x14no_implicit_withdraw\x18\x07 \x01(\x08\x12\n\n\x02rf\x18\x08 \x01(\r\x12\x12\n\nsource_asn\x18\t \x01(\r\x12\x11\n\tsource_id\x18\n \x01(\t\"<\n\x0b\x44\x65stination\x12\x0e\n\x06prefix\x18\x01 \x01(\t\x12\x1d\n\x05paths\x18\x02 \x03(\x0b\x32\x0e.gobgpapi.Path\"\x91\x01\n\x08PeerConf\x12\x11\n\tremote_ip\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x11\n\tremote_as\x18\x03 \x01(\r\x12\x12\n\nremote_cap\x18\x06 \x03(\x0c\x12\x11\n\tlocal_cap\x18\x07 \x03(\x0c\x12\x10\n\x08holdtime\x18\x08 \x01(\r\x12\x1a\n\x12keepalive_interval\x18\t \x01(\r\"\x93\x05\n\x08PeerInfo\x12\x11\n\tbgp_state\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x64min_state\x18\x02 \x01(\t\x12#\n\x1b\x66sm_established_transitions\x18\x03 \x01(\r\x12\x19\n\x11total_message_out\x18\x04 \x01(\x04\x12\x18\n\x10total_message_in\x18\x05 \x01(\x04\x12\x1a\n\x12update_message_out\x18\x06 \x01(\x04\x12\x19\n\x11update_message_in\x18\x07 \x01(\x04\x12\x1e\n\x16keep_alive_message_out\x18\x08 \x01(\x04\x12\x1d\n\x15keep_alive_message_in\x18\t \x01(\x04\x12\x18\n\x10open_message_out\x18\n \x01(\x04\x12\x17\n\x0fopen_message_in\x18\x0b \x01(\x04\x12\x18\n\x10notification_out\x18\x0c \x01(\x04\x12\x17\n\x0fnotification_in\x18\r \x01(\x04\x12\x1b\n\x13refresh_message_out\x18\x0e \x01(\x04\x12\x1a\n\x12refresh_message_in\x18\x0f \x01(\x04\x12\x15\n\rdiscarded_out\x18\x10 \x01(\x04\x12\x14\n\x0c\x64iscarded_in\x18\x11 \x01(\x04\x12\x0e\n\x06uptime\x18\x12 \x01(\x03\x12\x10\n\x08\x64owntime\x18\x13 \x01(\x03\x12\x12\n\nlast_error\x18\x14 \x01(\t\x12\x10\n\x08received\x18\x15 \x01(\r\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x16 \x01(\r\x12\x12\n\nadvertized\x18\x17 \x01(\r\x12\r\n\x05out_q\x18\x18 \x01(\r\x12\r\n\x05\x66lops\x18\x19 \x01(\r\x12\x1b\n\x13negotiated_holdtime\x18\x1a \x01(\r\x12\x1a\n\x12keepalive_interval\x18\x1b \x01(\r\"J\n\x04Peer\x12 \n\x04\x63onf\x18\x01 \x01(\x0b\x32\x12.gobgpapi.PeerConf\x12 \n\x04info\x18\x02 \x01(\x0b\x32\x12.gobgpapi.PeerInfo\"6\n\x06Prefix\x12\x11\n\tip_prefix\x18\x01 \x01(\t\x12\x19\n\x11mask_length_range\x18\x02 \x01(\t\"f\n\tPrefixSet\x12\x17\n\x0fprefix_set_name\x18\x01 \x01(\t\x12%\n\x0bprefix_list\x18\x02 \x03(\x0b\x32\x10.gobgpapi.Prefix\x12\x19\n\x11match_set_options\x18\x03 \x01(\t\"\x1b\n\x08Neighbor\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\"n\n\x0bNeighborSet\x12\x19\n\x11neighbor_set_name\x18\x01 \x01(\t\x12)\n\rneighbor_list\x18\x02 \x03(\x0b\x32\x12.gobgpapi.Neighbor\x12\x19\n\x11match_set_options\x18\x03 \x01(\t\"/\n\x0c\x41sPathLength\x12\r\n\x05value\x18\x01 \x01(\t\x12\x10\n\x08operator\x18\x02 \x01(\t\"Y\n\tAsPathSet\x12\x18\n\x10\x61s_path_set_name\x18\x01 \x01(\t\x12\x17\n\x0f\x61s_path_members\x18\x02 \x03(\t\x12\x19\n\x11match_set_options\x18\x03 \x01(\t\"`\n\x0c\x43ommunitySet\x12\x1a\n\x12\x63ommunity_set_name\x18\x01 \x01(\t\x12\x19\n\x11\x63ommunity_members\x18\x02 \x03(\t\x12\x19\n\x11match_set_options\x18\x03 \x01(\t\"k\n\x0f\x45xtCommunitySet\x12\x1e\n\x16\x65xt_community_set_name\x18\x01 \x01(\t\x12\x1d\n\x15\x65xt_community_members\x18\x02 \x03(\t\x12\x19\n\x11match_set_options\x18\x03 \x01(\t\"\xc5\x02\n\nConditions\x12-\n\x10match_prefix_set\x18\x01 \x01(\x0b\x32\x13.gobgpapi.PrefixSet\x12\x31\n\x12match_neighbor_set\x18\x02 \x01(\x0b\x32\x15.gobgpapi.NeighborSet\x12\x34\n\x14match_as_path_length\x18\x03 \x01(\x0b\x32\x16.gobgpapi.AsPathLength\x12.\n\x11match_as_path_set\x18\x04 \x01(\x0b\x32\x13.gobgpapi.AsPathSet\x12\x33\n\x13match_community_set\x18\x05 \x01(\x0b\x32\x16.gobgpapi.CommunitySet\x12:\n\x17match_ext_community_set\x18\x06 \x01(\x0b\x32\x19.gobgpapi.ExtCommunitySet\"7\n\x0f\x43ommunityAction\x12\x13\n\x0b\x63ommunities\x18\x01 \x03(\t\x12\x0f\n\x07options\x18\x02 \x01(\t\".\n\x0f\x41sPrependAction\x12\n\n\x02\x61s\x18\x01 \x01(\t\x12\x0f\n\x07repeatn\x18\x02 \x01(\r\"\xbb\x01\n\x07\x41\x63tions\x12\x14\n\x0croute_action\x18\x01 \x01(\t\x12,\n\tcommunity\x18\x02 \x01(\x0b\x32\x19.gobgpapi.CommunityAction\x12\x0b\n\x03med\x18\x03 \x01(\t\x12-\n\nas_prepend\x18\x04 \x01(\x0b\x32\x19.gobgpapi.AsPrependAction\x12\x30\n\rext_community\x18\x05 \x01(\x0b\x32\x19.gobgpapi.CommunityAction\"q\n\tStatement\x12\x16\n\x0estatement_neme\x18\x01 \x01(\t\x12(\n\nconditions\x18\x02 \x01(\x0b\x32\x14.gobgpapi.Conditions\x12\"\n\x07\x61\x63tions\x18\x03 \x01(\x0b\x32\x11.gobgpapi.Actions\"_\n\x10PolicyDefinition\x12\x1e\n\x16policy_definition_name\x18\x01 \x01(\t\x12+\n\x0estatement_list\x18\x02 \x03(\x0b\x32\x13.gobgpapi.Statement\"\x81\x02\n\x0b\x41pplyPolicy\x12\x33\n\x0fimport_policies\x18\x01 \x03(\x0b\x32\x1a.gobgpapi.PolicyDefinition\x12\x1d\n\x15\x64\x65\x66\x61ult_import_policy\x18\x02 \x01(\t\x12\x33\n\x0f\x65xport_policies\x18\x03 \x03(\x0b\x32\x1a.gobgpapi.PolicyDefinition\x12\x1d\n\x15\x64\x65\x66\x61ult_export_policy\x18\x04 \x01(\t\x12/\n\x0bin_policies\x18\x05 \x03(\x0b\x32\x1a.gobgpapi.PolicyDefinition\x12\x19\n\x11\x64\x65\x66\x61ult_in_policy\x18\x06 \x01(\t\"\x1a\n\nMrtMessage\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"\x1b\n\x08RPKIConf\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\"[\n\tRPKIState\x12\x0e\n\x06uptime\x18\x01 \x01(\x03\x12\x10\n\x08\x64owntime\x18\x02 \x01(\x03\x12\x15\n\rreceived_ipv4\x18\x03 \x01(\x05\x12\x15\n\rreceived_ipv6\x18\x04 \x01(\x05\"L\n\x04RPKI\x12 \n\x04\x63onf\x18\x01 \x01(\x0b\x32\x12.gobgpapi.RPKIConf\x12\"\n\x05state\x18\x02 \x01(\x0b\x32\x13.gobgpapi.RPKIState\"D\n\x03ROA\x12\n\n\x02\x61s\x18\x01 \x01(\r\x12\x11\n\tprefixlen\x18\x02 \x01(\r\x12\x0e\n\x06maxlen\x18\x03 \x01(\r\x12\x0e\n\x06prefix\x18\x04 \x01(\t\"E\n\x03Vrf\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02rd\x18\x02 \x01(\x0c\x12\x11\n\timport_rt\x18\x03 \x03(\x0c\x12\x11\n\texport_rt\x18\x04 \x03(\x0c*\xc5\x01\n\x08Resource\x12\n\n\x06GLOBAL\x10\x00\x12\t\n\x05LOCAL\x10\x01\x12\n\n\x06\x41\x44J_IN\x10\x02\x12\x0b\n\x07\x41\x44J_OUT\x10\x03\x12\x11\n\rPOLICY_PREFIX\x10\x04\x12\x13\n\x0fPOLICY_NEIGHBOR\x10\x05\x12\x11\n\rPOLICY_ASPATH\x10\x06\x12\x14\n\x10POLICY_COMMUNITY\x10\x07\x12\x16\n\x12POLICY_ROUTEPOLICY\x10\x08\x12\x17\n\x13POLICY_EXTCOMMUNITY\x10\t\x12\x07\n\x03VRF\x10\n**\n\tOperation\x12\x07\n\x03\x41\x44\x44\x10\x00\x12\x07\n\x03\x44\x45L\x10\x01\x12\x0b\n\x07\x44\x45L_ALL\x10\x02\x32\xe7\n\n\x08GobgpApi\x12\x37\n\x0cGetNeighbors\x12\x13.gobgpapi.Arguments\x1a\x0e.gobgpapi.Peer\"\x00\x30\x01\x12\x34\n\x0bGetNeighbor\x12\x13.gobgpapi.Arguments\x1a\x0e.gobgpapi.Peer\"\x00\x12\x38\n\x06GetRib\x12\x13.gobgpapi.Arguments\x1a\x15.gobgpapi.Destination\"\x00\x30\x01\x12/\n\x05Reset\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x33\n\tSoftReset\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x35\n\x0bSoftResetIn\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x36\n\x0cSoftResetOut\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x32\n\x08Shutdown\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x30\n\x06\x45nable\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x31\n\x07\x44isable\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12:\n\x07ModPath\x12\x1a.gobgpapi.ModPathArguments\x1a\x0f.gobgpapi.Error\"\x00(\x01\x12\x41\n\x11GetNeighborPolicy\x12\x13.gobgpapi.Arguments\x1a\x15.gobgpapi.ApplyPolicy\"\x00\x12\x45\n\x11ModNeighborPolicy\x12\x19.gobgpapi.PolicyArguments\x1a\x0f.gobgpapi.Error\"\x00(\x01\x30\x01\x12S\n\x16GetPolicyRoutePolicies\x12\x19.gobgpapi.PolicyArguments\x1a\x1a.gobgpapi.PolicyDefinition\"\x00\x30\x01\x12O\n\x14GetPolicyRoutePolicy\x12\x19.gobgpapi.PolicyArguments\x1a\x1a.gobgpapi.PolicyDefinition\"\x00\x12H\n\x14ModPolicyRoutePolicy\x12\x19.gobgpapi.PolicyArguments\x1a\x0f.gobgpapi.Error\"\x00(\x01\x30\x01\x12\x44\n\x12MonitorBestChanged\x12\x13.gobgpapi.Arguments\x1a\x15.gobgpapi.Destination\"\x00\x30\x01\x12;\n\x10MonitorPeerState\x12\x13.gobgpapi.Arguments\x1a\x0e.gobgpapi.Peer\"\x00\x30\x01\x12:\n\x06GetMrt\x12\x16.gobgpapi.MrtArguments\x1a\x14.gobgpapi.MrtMessage\"\x00\x30\x01\x12\x32\n\x07GetRPKI\x12\x13.gobgpapi.Arguments\x1a\x0e.gobgpapi.RPKI\"\x00\x30\x01\x12\x30\n\x06GetROA\x12\x13.gobgpapi.Arguments\x1a\r.gobgpapi.ROA\"\x00\x30\x01\x12\x31\n\x07GetVrfs\x12\x13.gobgpapi.Arguments\x1a\r.gobgpapi.Vrf\"\x00\x30\x01\x12\x36\n\x06ModVrf\x12\x19.gobgpapi.ModVrfArguments\x1a\x0f.gobgpapi.Error\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0bgobgp.proto\x12\x08gobgpapi\"a\n\x05\x45rror\x12\'\n\x04\x63ode\x18\x01 \x01(\x0e\x32\x19.gobgpapi.Error.ErrorCode\x12\x0b\n\x03msg\x18\x02 \x01(\t\"\"\n\tErrorCode\x12\x0b\n\x07SUCCESS\x10\x00\x12\x08\n\x04\x46\x41IL\x10\x01\"O\n\tArguments\x12$\n\x08resource\x18\x01 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\x0e\n\x06\x66\x61mily\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\"\xaa\x01\n\x10ModPathArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12$\n\x08resource\x18\x02 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x1c\n\x04path\x18\x04 \x01(\x0b\x32\x0e.gobgpapi.Path\x12\x0c\n\x04uuid\x18\x05 \x01(\x0c\x12\x0e\n\x06\x66\x61mily\x18\x06 \x01(\r\"\x1f\n\x0fModPathResponse\x12\x0c\n\x04uuid\x18\x01 \x01(\x0c\"f\n\x11ModPathsArguments\x12$\n\x08resource\x18\x01 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x1d\n\x05paths\x18\x03 \x03(\x0b\x32\x0e.gobgpapi.Path\"\\\n\x14ModNeighborArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12\x1c\n\x04peer\x18\x02 \x01(\x0b\x32\x0e.gobgpapi.Peer\"p\n\x0cMrtArguments\x12$\n\x08resource\x18\x01 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\x0e\n\x06\x66\x61mily\x18\x02 \x01(\r\x12\x10\n\x08interval\x18\x03 \x01(\x04\x12\x18\n\x10neighbor_address\x18\x04 \x01(\t\"p\n\x0fModMrtArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12\x11\n\tdump_type\x18\x02 \x01(\x05\x12\x10\n\x08\x66ilename\x18\x03 \x01(\t\x12\x10\n\x08interval\x18\x04 \x01(\x04\"\xc3\x01\n\x0fModBmpArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x0c\n\x04port\x18\x03 \x01(\r\x12\x38\n\x04type\x18\x04 \x01(\x0e\x32*.gobgpapi.ModBmpArguments.MonitoringPolicy\"/\n\x10MonitoringPolicy\x12\x07\n\x03PRE\x10\x00\x12\x08\n\x04POST\x10\x01\x12\x08\n\x04\x42OTH\x10\x02\"\x88\x01\n\x10ModRpkiArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12\x0b\n\x03\x61sn\x18\x02 \x01(\r\x12\x0f\n\x07\x61\x64\x64ress\x18\x03 \x01(\t\x12\x0c\n\x04port\x18\x04 \x01(\r\x12\x10\n\x08lifetime\x18\x05 \x01(\x03\x12\x0e\n\x06prefix\x18\x06 \x01(\t\"U\n\x0fModVrfArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12\x1a\n\x03vrf\x18\x02 \x01(\x0b\x32\r.gobgpapi.Vrf\"c\n\x16ModDefinedSetArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12!\n\x03set\x18\x02 \x01(\x0b\x32\x14.gobgpapi.DefinedSet\"g\n\x15ModStatementArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12&\n\tstatement\x18\x02 \x01(\x0b\x32\x13.gobgpapi.Statement\"\x9e\x01\n\x12ModPolicyArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12 \n\x06policy\x18\x02 \x01(\x0b\x32\x10.gobgpapi.Policy\x12!\n\x19refer_existing_statements\x18\x03 \x01(\x08\x12\x1b\n\x13preserve_statements\x18\x04 \x01(\x08\"v\n\x1cModPolicyAssignmentArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12.\n\nassignment\x18\x02 \x01(\x0b\x32\x1a.gobgpapi.PolicyAssignment\"d\n\x18ModGlobalConfigArguments\x12&\n\toperation\x18\x01 \x01(\x0e\x32\x13.gobgpapi.Operation\x12 \n\x06global\x18\x02 \x01(\x0b\x32\x10.gobgpapi.Global\"\x8d\x02\n\x04Path\x12\x0c\n\x04nlri\x18\x01 \x01(\x0c\x12\x0e\n\x06pattrs\x18\x02 \x03(\x0c\x12\x0b\n\x03\x61ge\x18\x03 \x01(\x03\x12\x0c\n\x04\x62\x65st\x18\x04 \x01(\x08\x12\x13\n\x0bis_withdraw\x18\x05 \x01(\x08\x12\x12\n\nvalidation\x18\x06 \x01(\x05\x12\x1c\n\x14no_implicit_withdraw\x18\x07 \x01(\x08\x12\x0e\n\x06\x66\x61mily\x18\x08 \x01(\r\x12\x12\n\nsource_asn\x18\t \x01(\r\x12\x11\n\tsource_id\x18\n \x01(\t\x12\x10\n\x08\x66iltered\x18\x0b \x01(\x08\x12\r\n\x05stale\x18\x0c \x01(\x08\x12\x18\n\x10is_from_external\x18\r \x01(\x08\x12\x13\n\x0bneighbor_ip\x18\x0e \x01(\t\"U\n\x0b\x44\x65stination\x12\x0e\n\x06prefix\x18\x01 \x01(\t\x12\x1d\n\x05paths\x18\x02 \x03(\x0b\x32\x0e.gobgpapi.Path\x12\x17\n\x0flonger_prefixes\x18\x03 \x01(\x08\"\x89\x01\n\x05Table\x12 \n\x04type\x18\x01 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x66\x61mily\x18\x03 \x01(\r\x12+\n\x0c\x64\x65stinations\x18\x04 \x03(\x0b\x32\x15.gobgpapi.Destination\x12\x13\n\x0bpost_policy\x18\x05 \x01(\x08\"\xe3\x02\n\x04Peer\x12\x10\n\x08\x66\x61milies\x18\x02 \x03(\r\x12+\n\x0c\x61pply_policy\x18\x03 \x01(\x0b\x32\x15.gobgpapi.ApplyPolicy\x12 \n\x04\x63onf\x18\x05 \x01(\x0b\x32\x12.gobgpapi.PeerConf\x12-\n\rebgp_multihop\x18\x06 \x01(\x0b\x32\x16.gobgpapi.EbgpMultihop\x12\x31\n\x0froute_reflector\x18\n \x01(\x0b\x32\x18.gobgpapi.RouteReflector\x12!\n\x04info\x18\x0b \x01(\x0b\x32\x13.gobgpapi.PeerState\x12 \n\x06timers\x18\x0c \x01(\x0b\x32\x10.gobgpapi.Timers\x12&\n\ttransport\x18\r \x01(\x0b\x32\x13.gobgpapi.Transport\x12+\n\x0croute_server\x18\x0f \x01(\x0b\x32\x15.gobgpapi.RouteServer\"\xa2\x01\n\x0b\x41pplyPolicy\x12-\n\tin_policy\x18\x01 \x01(\x0b\x32\x1a.gobgpapi.PolicyAssignment\x12\x31\n\rexport_policy\x18\x02 \x01(\x0b\x32\x1a.gobgpapi.PolicyAssignment\x12\x31\n\rimport_policy\x18\x03 \x01(\x0b\x32\x1a.gobgpapi.PolicyAssignment\"S\n\x0bPrefixLimit\x12\x0e\n\x06\x66\x61mily\x18\x01 \x01(\r\x12\x14\n\x0cmax_prefixes\x18\x02 \x01(\r\x12\x1e\n\x16shutdown_threshold_pct\x18\x03 \x01(\r\"\xca\x02\n\x08PeerConf\x12\x15\n\rauth_password\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x10\n\x08local_as\x18\x03 \x01(\r\x12\x18\n\x10neighbor_address\x18\x04 \x01(\t\x12\x0f\n\x07peer_as\x18\x05 \x01(\r\x12\x12\n\npeer_group\x18\x06 \x01(\t\x12\x11\n\tpeer_type\x18\x07 \x01(\r\x12\x19\n\x11remove_private_as\x18\x08 \x01(\r\x12\x1a\n\x12route_flap_damping\x18\t \x01(\x08\x12\x16\n\x0esend_community\x18\n \x01(\r\x12\x12\n\nremote_cap\x18\x0b \x03(\x0c\x12\x11\n\tlocal_cap\x18\x0c \x03(\x0c\x12\n\n\x02id\x18\r \x01(\t\x12,\n\rprefix_limits\x18\x0e \x03(\x0b\x32\x15.gobgpapi.PrefixLimit\"5\n\x0c\x45\x62gpMultihop\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\x14\n\x0cmultihop_ttl\x18\x02 \x01(\r\"T\n\x0eRouteReflector\x12\x1e\n\x16route_reflector_client\x18\x01 \x01(\x08\x12\"\n\x1aroute_reflector_cluster_id\x18\x02 \x01(\r\"\xe7\x03\n\tPeerState\x12\x15\n\rauth_password\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x10\n\x08local_as\x18\x03 \x01(\r\x12$\n\x08messages\x18\x04 \x01(\x0b\x32\x12.gobgpapi.Messages\x12\x18\n\x10neighbor_address\x18\x05 \x01(\t\x12\x0f\n\x07peer_as\x18\x06 \x01(\r\x12\x12\n\npeer_group\x18\x07 \x01(\t\x12\x11\n\tpeer_type\x18\x08 \x01(\r\x12 \n\x06queues\x18\t \x01(\x0b\x32\x10.gobgpapi.Queues\x12\x19\n\x11remove_private_as\x18\n \x01(\r\x12\x1a\n\x12route_flap_damping\x18\x0b \x01(\x08\x12\x16\n\x0esend_community\x18\x0c \x01(\r\x12\x15\n\rsession_state\x18\r \x01(\r\x12\x1e\n\x16supported_capabilities\x18\x0e \x03(\t\x12\x11\n\tbgp_state\x18\x0f \x01(\t\x12\x13\n\x0b\x61\x64min_state\x18\x10 \x01(\t\x12\x10\n\x08received\x18\x11 \x01(\r\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x12 \x01(\r\x12\x12\n\nadvertised\x18\x13 \x01(\r\x12\r\n\x05out_q\x18\x14 \x01(\r\x12\r\n\x05\x66lops\x18\x15 \x01(\r\"P\n\x08Messages\x12#\n\x08received\x18\x01 \x01(\x0b\x32\x11.gobgpapi.Message\x12\x1f\n\x04sent\x18\x02 \x01(\x0b\x32\x11.gobgpapi.Message\"\x83\x01\n\x07Message\x12\x14\n\x0cNOTIFICATION\x18\x01 \x01(\x04\x12\x0e\n\x06UPDATE\x18\x02 \x01(\x04\x12\x0c\n\x04OPEN\x18\x03 \x01(\x04\x12\x11\n\tKEEPALIVE\x18\x04 \x01(\x04\x12\x0f\n\x07REFRESH\x18\x05 \x01(\x04\x12\x11\n\tDISCARDED\x18\x06 \x01(\x04\x12\r\n\x05TOTAL\x18\x07 \x01(\x04\"\'\n\x06Queues\x12\r\n\x05input\x18\x01 \x01(\r\x12\x0e\n\x06output\x18\x02 \x01(\r\"V\n\x06Timers\x12&\n\x06\x63onfig\x18\x01 \x01(\x0b\x32\x16.gobgpapi.TimersConfig\x12$\n\x05state\x18\x02 \x01(\x0b\x32\x15.gobgpapi.TimersState\"|\n\x0cTimersConfig\x12\x15\n\rconnect_retry\x18\x01 \x01(\x04\x12\x11\n\thold_time\x18\x02 \x01(\x04\x12\x1a\n\x12keepalive_interval\x18\x03 \x01(\x04\x12&\n\x1eminimum_advertisement_interval\x18\x04 \x01(\x04\"\xbb\x01\n\x0bTimersState\x12\x15\n\rconnect_retry\x18\x01 \x01(\x04\x12\x11\n\thold_time\x18\x02 \x01(\x04\x12\x1a\n\x12keepalive_interval\x18\x03 \x01(\x04\x12&\n\x1eminimum_advertisement_interval\x18\x04 \x01(\x04\x12\x1c\n\x14negotiated_hold_time\x18\x05 \x01(\x04\x12\x0e\n\x06uptime\x18\x06 \x01(\x04\x12\x10\n\x08\x64owntime\x18\x07 \x01(\x04\"\xa1\x01\n\tTransport\x12\x15\n\rlocal_address\x18\x01 \x01(\t\x12\x12\n\nlocal_port\x18\x02 \x01(\r\x12\x15\n\rmtu_discovery\x18\x03 \x01(\x08\x12\x14\n\x0cpassive_mode\x18\x04 \x01(\x08\x12\x16\n\x0eremote_address\x18\x05 \x01(\t\x12\x13\n\x0bremote_port\x18\x06 \x01(\r\x12\x0f\n\x07tcp_mss\x18\x07 \x01(\r\"*\n\x0bRouteServer\x12\x1b\n\x13route_server_client\x18\x01 \x01(\x08\"M\n\x06Prefix\x12\x11\n\tip_prefix\x18\x01 \x01(\t\x12\x17\n\x0fmask_length_min\x18\x02 \x01(\r\x12\x17\n\x0fmask_length_max\x18\x03 \x01(\r\"q\n\nDefinedSet\x12#\n\x04type\x18\x01 \x01(\x0e\x32\x15.gobgpapi.DefinedType\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04list\x18\x03 \x03(\t\x12\"\n\x08prefixes\x18\x04 \x03(\x0b\x32\x10.gobgpapi.Prefix\";\n\x08MatchSet\x12!\n\x04type\x18\x01 \x01(\x0e\x32\x13.gobgpapi.MatchType\x12\x0c\n\x04name\x18\x02 \x01(\t\"H\n\x0c\x41sPathLength\x12(\n\x04type\x18\x01 \x01(\x0e\x32\x1a.gobgpapi.AsPathLengthType\x12\x0e\n\x06length\x18\x02 \x01(\r\"\xa6\x02\n\nConditions\x12&\n\nprefix_set\x18\x01 \x01(\x0b\x32\x12.gobgpapi.MatchSet\x12(\n\x0cneighbor_set\x18\x02 \x01(\x0b\x32\x12.gobgpapi.MatchSet\x12.\n\x0e\x61s_path_length\x18\x03 \x01(\x0b\x32\x16.gobgpapi.AsPathLength\x12\'\n\x0b\x61s_path_set\x18\x04 \x01(\x0b\x32\x12.gobgpapi.MatchSet\x12)\n\rcommunity_set\x18\x05 \x01(\x0b\x32\x12.gobgpapi.MatchSet\x12-\n\x11\x65xt_community_set\x18\x06 \x01(\x0b\x32\x12.gobgpapi.MatchSet\x12\x13\n\x0brpki_result\x18\x07 \x01(\x05\"S\n\x0f\x43ommunityAction\x12+\n\x04type\x18\x01 \x01(\x0e\x32\x1d.gobgpapi.CommunityActionType\x12\x13\n\x0b\x63ommunities\x18\x02 \x03(\t\"A\n\tMedAction\x12%\n\x04type\x18\x01 \x01(\x0e\x32\x17.gobgpapi.MedActionType\x12\r\n\x05value\x18\x02 \x01(\x03\"E\n\x0f\x41sPrependAction\x12\x0b\n\x03\x61sn\x18\x01 \x01(\r\x12\x0e\n\x06repeat\x18\x02 \x01(\r\x12\x15\n\ruse_left_most\x18\x03 \x01(\x08\" \n\rNexthopAction\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\"\x91\x02\n\x07\x41\x63tions\x12+\n\x0croute_action\x18\x01 \x01(\x0e\x32\x15.gobgpapi.RouteAction\x12,\n\tcommunity\x18\x02 \x01(\x0b\x32\x19.gobgpapi.CommunityAction\x12 \n\x03med\x18\x03 \x01(\x0b\x32\x13.gobgpapi.MedAction\x12-\n\nas_prepend\x18\x04 \x01(\x0b\x32\x19.gobgpapi.AsPrependAction\x12\x30\n\rext_community\x18\x05 \x01(\x0b\x32\x19.gobgpapi.CommunityAction\x12(\n\x07nexthop\x18\x06 \x01(\x0b\x32\x17.gobgpapi.NexthopAction\"g\n\tStatement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12(\n\nconditions\x18\x02 \x01(\x0b\x32\x14.gobgpapi.Conditions\x12\"\n\x07\x61\x63tions\x18\x03 \x01(\x0b\x32\x11.gobgpapi.Actions\"?\n\x06Policy\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\'\n\nstatements\x18\x02 \x03(\x0b\x32\x13.gobgpapi.Statement\"\xb6\x01\n\x10PolicyAssignment\x12\"\n\x04type\x18\x01 \x01(\x0e\x32\x14.gobgpapi.PolicyType\x12$\n\x08resource\x18\x02 \x01(\x0e\x32\x12.gobgpapi.Resource\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\"\n\x08policies\x18\x04 \x03(\x0b\x32\x10.gobgpapi.Policy\x12&\n\x07\x64\x65\x66\x61ult\x18\x05 \x01(\x0e\x32\x15.gobgpapi.RouteAction\"\x1a\n\nMrtMessage\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"0\n\x08RPKIConf\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x13\n\x0bremote_port\x18\x02 \x01(\t\"\xde\x02\n\tRPKIState\x12\x0e\n\x06uptime\x18\x01 \x01(\x03\x12\x10\n\x08\x64owntime\x18\x02 \x01(\x03\x12\n\n\x02up\x18\x03 \x01(\x08\x12\x13\n\x0brecord_ipv4\x18\x04 \x01(\r\x12\x13\n\x0brecord_ipv6\x18\x05 \x01(\r\x12\x13\n\x0bprefix_ipv4\x18\x06 \x01(\r\x12\x13\n\x0bprefix_ipv6\x18\x07 \x01(\r\x12\x0e\n\x06serial\x18\x08 \x01(\r\x12\x15\n\rreceived_ipv4\x18\t \x01(\x03\x12\x15\n\rreceived_ipv6\x18\n \x01(\x03\x12\x15\n\rserial_notify\x18\x0b \x01(\x03\x12\x13\n\x0b\x63\x61\x63he_reset\x18\x0c \x01(\x03\x12\x16\n\x0e\x63\x61\x63he_response\x18\r \x01(\x03\x12\x13\n\x0b\x65nd_of_data\x18\x0e \x01(\x03\x12\r\n\x05\x65rror\x18\x0f \x01(\x03\x12\x14\n\x0cserial_query\x18\x10 \x01(\x03\x12\x13\n\x0breset_query\x18\x11 \x01(\x03\"L\n\x04RPKI\x12 \n\x04\x63onf\x18\x01 \x01(\x0b\x32\x12.gobgpapi.RPKIConf\x12\"\n\x05state\x18\x02 \x01(\x0b\x32\x13.gobgpapi.RPKIState\"f\n\x03ROA\x12\n\n\x02\x61s\x18\x01 \x01(\r\x12\x11\n\tprefixlen\x18\x02 \x01(\r\x12\x0e\n\x06maxlen\x18\x03 \x01(\r\x12\x0e\n\x06prefix\x18\x04 \x01(\t\x12 \n\x04\x63onf\x18\x05 \x01(\x0b\x32\x12.gobgpapi.RPKIConf\"E\n\x03Vrf\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02rd\x18\x02 \x01(\x0c\x12\x11\n\timport_rt\x18\x03 \x03(\x0c\x12\x11\n\texport_rt\x18\x04 \x03(\x0c\"\x98\x01\n\x06Global\x12\n\n\x02\x61s\x18\x01 \x01(\r\x12\x11\n\trouter_id\x18\x02 \x01(\t\x12\x13\n\x0blisten_port\x18\x03 \x01(\x05\x12\x18\n\x10listen_addresses\x18\x04 \x03(\t\x12\x10\n\x08\x66\x61milies\x18\x05 \x03(\r\x12\x16\n\x0empls_label_min\x18\x06 \x01(\r\x12\x16\n\x0empls_label_max\x18\x07 \x01(\r*C\n\x08Resource\x12\n\n\x06GLOBAL\x10\x00\x12\t\n\x05LOCAL\x10\x01\x12\n\n\x06\x41\x44J_IN\x10\x02\x12\x0b\n\x07\x41\x44J_OUT\x10\x03\x12\x07\n\x03VRF\x10\x04*z\n\tOperation\x12\x07\n\x03\x41\x44\x44\x10\x00\x12\x07\n\x03\x44\x45L\x10\x01\x12\x0b\n\x07\x44\x45L_ALL\x10\x02\x12\x0b\n\x07REPLACE\x10\x03\x12\n\n\x06\x45NABLE\x10\x04\x12\x0b\n\x07\x44ISABLE\x10\x05\x12\t\n\x05RESET\x10\x06\x12\r\n\tSOFTRESET\x10\x07\x12\x0e\n\nINITIALIZE\x10\x08*_\n\x0b\x44\x65\x66inedType\x12\n\n\x06PREFIX\x10\x00\x12\x0c\n\x08NEIGHBOR\x10\x01\x12\x07\n\x03TAG\x10\x02\x12\x0b\n\x07\x41S_PATH\x10\x03\x12\r\n\tCOMMUNITY\x10\x04\x12\x11\n\rEXT_COMMUNITY\x10\x05*)\n\tMatchType\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x41LL\x10\x01\x12\n\n\x06INVERT\x10\x02**\n\x10\x41sPathLengthType\x12\x06\n\x02\x45Q\x10\x00\x12\x06\n\x02GE\x10\x01\x12\x06\n\x02LE\x10\x02*/\n\x0bRouteAction\x12\x08\n\x04NONE\x10\x00\x12\n\n\x06\x41\x43\x43\x45PT\x10\x01\x12\n\n\x06REJECT\x10\x02*U\n\x13\x43ommunityActionType\x12\x11\n\rCOMMUNITY_ADD\x10\x00\x12\x14\n\x10\x43OMMUNITY_REMOVE\x10\x01\x12\x15\n\x11\x43OMMUNITY_REPLACE\x10\x02*-\n\rMedActionType\x12\x0b\n\x07MED_MOD\x10\x00\x12\x0f\n\x0bMED_REPLACE\x10\x01*,\n\nPolicyType\x12\x06\n\x02IN\x10\x00\x12\n\n\x06IMPORT\x10\x01\x12\n\n\x06\x45XPORT\x10\x02\x32\xa4\x11\n\x08GobgpApi\x12:\n\x0fGetGlobalConfig\x12\x13.gobgpapi.Arguments\x1a\x10.gobgpapi.Global\"\x00\x12H\n\x0fModGlobalConfig\x12\".gobgpapi.ModGlobalConfigArguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x37\n\x0cGetNeighbors\x12\x13.gobgpapi.Arguments\x1a\x0e.gobgpapi.Peer\"\x00\x30\x01\x12\x34\n\x0bGetNeighbor\x12\x13.gobgpapi.Arguments\x1a\x0e.gobgpapi.Peer\"\x00\x12@\n\x0bModNeighbor\x12\x1e.gobgpapi.ModNeighborArguments\x1a\x0f.gobgpapi.Error\"\x00\x12,\n\x06GetRib\x12\x0f.gobgpapi.Table\x1a\x0f.gobgpapi.Table\"\x00\x12/\n\x05Reset\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x33\n\tSoftReset\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x35\n\x0bSoftResetIn\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x36\n\x0cSoftResetOut\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x32\n\x08Shutdown\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x30\n\x06\x45nable\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x31\n\x07\x44isable\x12\x13.gobgpapi.Arguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x42\n\x07ModPath\x12\x1a.gobgpapi.ModPathArguments\x1a\x19.gobgpapi.ModPathResponse\"\x00\x12<\n\x08ModPaths\x12\x1b.gobgpapi.ModPathsArguments\x1a\x0f.gobgpapi.Error\"\x00(\x01\x12\x38\n\nMonitorRib\x12\x0f.gobgpapi.Table\x1a\x15.gobgpapi.Destination\"\x00\x30\x01\x12\x44\n\x12MonitorBestChanged\x12\x13.gobgpapi.Arguments\x1a\x15.gobgpapi.Destination\"\x00\x30\x01\x12;\n\x10MonitorPeerState\x12\x13.gobgpapi.Arguments\x1a\x0e.gobgpapi.Peer\"\x00\x30\x01\x12:\n\x06GetMrt\x12\x16.gobgpapi.MrtArguments\x1a\x14.gobgpapi.MrtMessage\"\x00\x30\x01\x12\x36\n\x06ModMrt\x12\x19.gobgpapi.ModMrtArguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x36\n\x06ModBmp\x12\x19.gobgpapi.ModBmpArguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x32\n\x07GetRPKI\x12\x13.gobgpapi.Arguments\x1a\x0e.gobgpapi.RPKI\"\x00\x30\x01\x12\x38\n\x07ModRPKI\x12\x1a.gobgpapi.ModRpkiArguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x30\n\x06GetROA\x12\x13.gobgpapi.Arguments\x1a\r.gobgpapi.ROA\"\x00\x30\x01\x12\x31\n\x07GetVrfs\x12\x13.gobgpapi.Arguments\x1a\r.gobgpapi.Vrf\"\x00\x30\x01\x12\x36\n\x06ModVrf\x12\x19.gobgpapi.ModVrfArguments\x1a\x0f.gobgpapi.Error\"\x00\x12=\n\rGetDefinedSet\x12\x14.gobgpapi.DefinedSet\x1a\x14.gobgpapi.DefinedSet\"\x00\x12@\n\x0eGetDefinedSets\x12\x14.gobgpapi.DefinedSet\x1a\x14.gobgpapi.DefinedSet\"\x00\x30\x01\x12\x44\n\rModDefinedSet\x12 .gobgpapi.ModDefinedSetArguments\x1a\x0f.gobgpapi.Error\"\x00\x12:\n\x0cGetStatement\x12\x13.gobgpapi.Statement\x1a\x13.gobgpapi.Statement\"\x00\x12=\n\rGetStatements\x12\x13.gobgpapi.Statement\x1a\x13.gobgpapi.Statement\"\x00\x30\x01\x12\x42\n\x0cModStatement\x12\x1f.gobgpapi.ModStatementArguments\x1a\x0f.gobgpapi.Error\"\x00\x12\x31\n\tGetPolicy\x12\x10.gobgpapi.Policy\x1a\x10.gobgpapi.Policy\"\x00\x12\x35\n\x0bGetPolicies\x12\x10.gobgpapi.Policy\x1a\x10.gobgpapi.Policy\"\x00\x30\x01\x12<\n\tModPolicy\x12\x1c.gobgpapi.ModPolicyArguments\x1a\x0f.gobgpapi.Error\"\x00\x12O\n\x13GetPolicyAssignment\x12\x1a.gobgpapi.PolicyAssignment\x1a\x1a.gobgpapi.PolicyAssignment\"\x00\x12P\n\x13ModPolicyAssignment\x12&.gobgpapi.ModPolicyAssignmentArguments\x1a\x0f.gobgpapi.Error\"\x00\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -47,38 +47,14 @@ _RESOURCE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='POLICY_PREFIX', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POLICY_NEIGHBOR', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POLICY_ASPATH', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POLICY_COMMUNITY', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POLICY_ROUTEPOLICY', index=8, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POLICY_EXTCOMMUNITY', index=9, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='VRF', index=10, number=10,
+      name='VRF', index=4, number=4,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=3988,
-  serialized_end=4185,
+  serialized_start=7143,
+  serialized_end=7210,
 )
 _sym_db.RegisterEnumDescriptor(_RESOURCE)
 
@@ -101,29 +77,273 @@ _OPERATION = _descriptor.EnumDescriptor(
       name='DEL_ALL', index=2, number=2,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REPLACE', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENABLE', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DISABLE', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RESET', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SOFTRESET', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INITIALIZE', index=8, number=8,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=4187,
-  serialized_end=4229,
+  serialized_start=7212,
+  serialized_end=7334,
 )
 _sym_db.RegisterEnumDescriptor(_OPERATION)
 
 Operation = enum_type_wrapper.EnumTypeWrapper(_OPERATION)
+_DEFINEDTYPE = _descriptor.EnumDescriptor(
+  name='DefinedType',
+  full_name='gobgpapi.DefinedType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='PREFIX', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NEIGHBOR', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TAG', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AS_PATH', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='COMMUNITY', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='EXT_COMMUNITY', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7336,
+  serialized_end=7431,
+)
+_sym_db.RegisterEnumDescriptor(_DEFINEDTYPE)
+
+DefinedType = enum_type_wrapper.EnumTypeWrapper(_DEFINEDTYPE)
+_MATCHTYPE = _descriptor.EnumDescriptor(
+  name='MatchType',
+  full_name='gobgpapi.MatchType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ANY', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ALL', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVERT', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7433,
+  serialized_end=7474,
+)
+_sym_db.RegisterEnumDescriptor(_MATCHTYPE)
+
+MatchType = enum_type_wrapper.EnumTypeWrapper(_MATCHTYPE)
+_ASPATHLENGTHTYPE = _descriptor.EnumDescriptor(
+  name='AsPathLengthType',
+  full_name='gobgpapi.AsPathLengthType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='EQ', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LE', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7476,
+  serialized_end=7518,
+)
+_sym_db.RegisterEnumDescriptor(_ASPATHLENGTHTYPE)
+
+AsPathLengthType = enum_type_wrapper.EnumTypeWrapper(_ASPATHLENGTHTYPE)
+_ROUTEACTION = _descriptor.EnumDescriptor(
+  name='RouteAction',
+  full_name='gobgpapi.RouteAction',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NONE', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ACCEPT', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REJECT', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7520,
+  serialized_end=7567,
+)
+_sym_db.RegisterEnumDescriptor(_ROUTEACTION)
+
+RouteAction = enum_type_wrapper.EnumTypeWrapper(_ROUTEACTION)
+_COMMUNITYACTIONTYPE = _descriptor.EnumDescriptor(
+  name='CommunityActionType',
+  full_name='gobgpapi.CommunityActionType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='COMMUNITY_ADD', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='COMMUNITY_REMOVE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='COMMUNITY_REPLACE', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7569,
+  serialized_end=7654,
+)
+_sym_db.RegisterEnumDescriptor(_COMMUNITYACTIONTYPE)
+
+CommunityActionType = enum_type_wrapper.EnumTypeWrapper(_COMMUNITYACTIONTYPE)
+_MEDACTIONTYPE = _descriptor.EnumDescriptor(
+  name='MedActionType',
+  full_name='gobgpapi.MedActionType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='MED_MOD', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MED_REPLACE', index=1, number=1,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7656,
+  serialized_end=7701,
+)
+_sym_db.RegisterEnumDescriptor(_MEDACTIONTYPE)
+
+MedActionType = enum_type_wrapper.EnumTypeWrapper(_MEDACTIONTYPE)
+_POLICYTYPE = _descriptor.EnumDescriptor(
+  name='PolicyType',
+  full_name='gobgpapi.PolicyType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='IN', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IMPORT', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='EXPORT', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7703,
+  serialized_end=7747,
+)
+_sym_db.RegisterEnumDescriptor(_POLICYTYPE)
+
+PolicyType = enum_type_wrapper.EnumTypeWrapper(_POLICYTYPE)
 GLOBAL = 0
 LOCAL = 1
 ADJ_IN = 2
 ADJ_OUT = 3
-POLICY_PREFIX = 4
-POLICY_NEIGHBOR = 5
-POLICY_ASPATH = 6
-POLICY_COMMUNITY = 7
-POLICY_ROUTEPOLICY = 8
-POLICY_EXTCOMMUNITY = 9
-VRF = 10
+VRF = 4
 ADD = 0
 DEL = 1
 DEL_ALL = 2
+REPLACE = 3
+ENABLE = 4
+DISABLE = 5
+RESET = 6
+SOFTRESET = 7
+INITIALIZE = 8
+PREFIX = 0
+NEIGHBOR = 1
+TAG = 2
+AS_PATH = 3
+COMMUNITY = 4
+EXT_COMMUNITY = 5
+ANY = 0
+ALL = 1
+INVERT = 2
+EQ = 0
+GE = 1
+LE = 2
+NONE = 0
+ACCEPT = 1
+REJECT = 2
+COMMUNITY_ADD = 0
+COMMUNITY_REMOVE = 1
+COMMUNITY_REPLACE = 2
+MED_MOD = 0
+MED_REPLACE = 1
+IN = 0
+IMPORT = 1
+EXPORT = 2
 
 
 _ERROR_ERRORCODE = _descriptor.EnumDescriptor(
@@ -147,6 +367,32 @@ _ERROR_ERRORCODE = _descriptor.EnumDescriptor(
   serialized_end=122,
 )
 _sym_db.RegisterEnumDescriptor(_ERROR_ERRORCODE)
+
+_MODBMPARGUMENTS_MONITORINGPOLICY = _descriptor.EnumDescriptor(
+  name='MonitoringPolicy',
+  full_name='gobgpapi.ModBmpArguments.MonitoringPolicy',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='PRE', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POST', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BOTH', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=986,
+  serialized_end=1033,
+)
+_sym_db.RegisterEnumDescriptor(_MODBMPARGUMENTS_MONITORINGPOLICY)
 
 
 _ERROR = _descriptor.Descriptor(
@@ -203,7 +449,7 @@ _ARGUMENTS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='rf', full_name='gobgpapi.Arguments.rf', index=1,
+      name='family', full_name='gobgpapi.Arguments.family', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -229,7 +475,7 @@ _ARGUMENTS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=124,
-  serialized_end=199,
+  serialized_end=203,
 )
 
 
@@ -241,21 +487,118 @@ _MODPATHARGUMENTS = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='resource', full_name='gobgpapi.ModPathArguments.resource', index=0,
+      name='operation', full_name='gobgpapi.ModPathArguments.operation', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='gobgpapi.ModPathArguments.name', index=1,
+      name='resource', full_name='gobgpapi.ModPathArguments.resource', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='gobgpapi.ModPathArguments.name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='path', full_name='gobgpapi.ModPathArguments.path', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='uuid', full_name='gobgpapi.ModPathArguments.uuid', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='family', full_name='gobgpapi.ModPathArguments.family', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=206,
+  serialized_end=376,
+)
+
+
+_MODPATHRESPONSE = _descriptor.Descriptor(
+  name='ModPathResponse',
+  full_name='gobgpapi.ModPathResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uuid', full_name='gobgpapi.ModPathResponse.uuid', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=378,
+  serialized_end=409,
+)
+
+
+_MODPATHSARGUMENTS = _descriptor.Descriptor(
+  name='ModPathsArguments',
+  full_name='gobgpapi.ModPathsArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='resource', full_name='gobgpapi.ModPathsArguments.resource', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='gobgpapi.ModPathsArguments.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='paths', full_name='gobgpapi.ModPathArguments.paths', index=2,
+      name='paths', full_name='gobgpapi.ModPathsArguments.paths', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -273,56 +616,28 @@ _MODPATHARGUMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=201,
-  serialized_end=302,
+  serialized_start=411,
+  serialized_end=513,
 )
 
 
-_POLICYARGUMENTS = _descriptor.Descriptor(
-  name='PolicyArguments',
-  full_name='gobgpapi.PolicyArguments',
+_MODNEIGHBORARGUMENTS = _descriptor.Descriptor(
+  name='ModNeighborArguments',
+  full_name='gobgpapi.ModNeighborArguments',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='resource', full_name='gobgpapi.PolicyArguments.resource', index=0,
+      name='operation', full_name='gobgpapi.ModNeighborArguments.operation', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='operation', full_name='gobgpapi.PolicyArguments.operation', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='neighbor_address', full_name='gobgpapi.PolicyArguments.neighbor_address', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='gobgpapi.PolicyArguments.name', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='policy_definition', full_name='gobgpapi.PolicyArguments.policy_definition', index=4,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='apply_policy', full_name='gobgpapi.PolicyArguments.apply_policy', index=5,
-      number=7, type=11, cpp_type=10, label=1,
+      name='peer', full_name='gobgpapi.ModNeighborArguments.peer', index=1,
+      number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -339,8 +654,8 @@ _POLICYARGUMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=305,
-  serialized_end=540,
+  serialized_start=515,
+  serialized_end=607,
 )
 
 
@@ -359,7 +674,7 @@ _MRTARGUMENTS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='rf', full_name='gobgpapi.MrtArguments.rf', index=1,
+      name='family', full_name='gobgpapi.MrtArguments.family', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -391,8 +706,179 @@ _MRTARGUMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=542,
-  serialized_end=650,
+  serialized_start=609,
+  serialized_end=721,
+)
+
+
+_MODMRTARGUMENTS = _descriptor.Descriptor(
+  name='ModMrtArguments',
+  full_name='gobgpapi.ModMrtArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='operation', full_name='gobgpapi.ModMrtArguments.operation', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dump_type', full_name='gobgpapi.ModMrtArguments.dump_type', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='filename', full_name='gobgpapi.ModMrtArguments.filename', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='interval', full_name='gobgpapi.ModMrtArguments.interval', index=3,
+      number=4, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=723,
+  serialized_end=835,
+)
+
+
+_MODBMPARGUMENTS = _descriptor.Descriptor(
+  name='ModBmpArguments',
+  full_name='gobgpapi.ModBmpArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='operation', full_name='gobgpapi.ModBmpArguments.operation', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='gobgpapi.ModBmpArguments.address', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='port', full_name='gobgpapi.ModBmpArguments.port', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='gobgpapi.ModBmpArguments.type', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _MODBMPARGUMENTS_MONITORINGPOLICY,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=838,
+  serialized_end=1033,
+)
+
+
+_MODRPKIARGUMENTS = _descriptor.Descriptor(
+  name='ModRpkiArguments',
+  full_name='gobgpapi.ModRpkiArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='operation', full_name='gobgpapi.ModRpkiArguments.operation', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='asn', full_name='gobgpapi.ModRpkiArguments.asn', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='gobgpapi.ModRpkiArguments.address', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='port', full_name='gobgpapi.ModRpkiArguments.port', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='lifetime', full_name='gobgpapi.ModRpkiArguments.lifetime', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='prefix', full_name='gobgpapi.ModRpkiArguments.prefix', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1036,
+  serialized_end=1172,
 )
 
 
@@ -429,8 +915,212 @@ _MODVRFARGUMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=652,
-  serialized_end=737,
+  serialized_start=1174,
+  serialized_end=1259,
+)
+
+
+_MODDEFINEDSETARGUMENTS = _descriptor.Descriptor(
+  name='ModDefinedSetArguments',
+  full_name='gobgpapi.ModDefinedSetArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='operation', full_name='gobgpapi.ModDefinedSetArguments.operation', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='set', full_name='gobgpapi.ModDefinedSetArguments.set', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1261,
+  serialized_end=1360,
+)
+
+
+_MODSTATEMENTARGUMENTS = _descriptor.Descriptor(
+  name='ModStatementArguments',
+  full_name='gobgpapi.ModStatementArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='operation', full_name='gobgpapi.ModStatementArguments.operation', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='statement', full_name='gobgpapi.ModStatementArguments.statement', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1362,
+  serialized_end=1465,
+)
+
+
+_MODPOLICYARGUMENTS = _descriptor.Descriptor(
+  name='ModPolicyArguments',
+  full_name='gobgpapi.ModPolicyArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='operation', full_name='gobgpapi.ModPolicyArguments.operation', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='policy', full_name='gobgpapi.ModPolicyArguments.policy', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='refer_existing_statements', full_name='gobgpapi.ModPolicyArguments.refer_existing_statements', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='preserve_statements', full_name='gobgpapi.ModPolicyArguments.preserve_statements', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1468,
+  serialized_end=1626,
+)
+
+
+_MODPOLICYASSIGNMENTARGUMENTS = _descriptor.Descriptor(
+  name='ModPolicyAssignmentArguments',
+  full_name='gobgpapi.ModPolicyAssignmentArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='operation', full_name='gobgpapi.ModPolicyAssignmentArguments.operation', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='assignment', full_name='gobgpapi.ModPolicyAssignmentArguments.assignment', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1628,
+  serialized_end=1746,
+)
+
+
+_MODGLOBALCONFIGARGUMENTS = _descriptor.Descriptor(
+  name='ModGlobalConfigArguments',
+  full_name='gobgpapi.ModGlobalConfigArguments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='operation', full_name='gobgpapi.ModGlobalConfigArguments.operation', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='global', full_name='gobgpapi.ModGlobalConfigArguments.global', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1748,
+  serialized_end=1848,
 )
 
 
@@ -491,7 +1181,7 @@ _PATH = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='rf', full_name='gobgpapi.Path.rf', index=7,
+      name='family', full_name='gobgpapi.Path.family', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -511,6 +1201,34 @@ _PATH = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='filtered', full_name='gobgpapi.Path.filtered', index=10,
+      number=11, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='stale', full_name='gobgpapi.Path.stale', index=11,
+      number=12, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_from_external', full_name='gobgpapi.Path.is_from_external', index=12,
+      number=13, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='neighbor_ip', full_name='gobgpapi.Path.neighbor_ip', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -523,8 +1241,8 @@ _PATH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=740,
-  serialized_end=925,
+  serialized_start=1851,
+  serialized_end=2120,
 )
 
 
@@ -549,6 +1267,13 @@ _DESTINATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='longer_prefixes', full_name='gobgpapi.Destination.longer_prefixes', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -561,64 +1286,50 @@ _DESTINATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=927,
-  serialized_end=987,
+  serialized_start=2122,
+  serialized_end=2207,
 )
 
 
-_PEERCONF = _descriptor.Descriptor(
-  name='PeerConf',
-  full_name='gobgpapi.PeerConf',
+_TABLE = _descriptor.Descriptor(
+  name='Table',
+  full_name='gobgpapi.Table',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='remote_ip', full_name='gobgpapi.PeerConf.remote_ip', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='type', full_name='gobgpapi.Table.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='id', full_name='gobgpapi.PeerConf.id', index=1,
+      name='name', full_name='gobgpapi.Table.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='remote_as', full_name='gobgpapi.PeerConf.remote_as', index=2,
+      name='family', full_name='gobgpapi.Table.family', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='remote_cap', full_name='gobgpapi.PeerConf.remote_cap', index=3,
-      number=6, type=12, cpp_type=9, label=3,
+      name='destinations', full_name='gobgpapi.Table.destinations', index=3,
+      number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='local_cap', full_name='gobgpapi.PeerConf.local_cap', index=4,
-      number=7, type=12, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='holdtime', full_name='gobgpapi.PeerConf.holdtime', index=5,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='keepalive_interval', full_name='gobgpapi.PeerConf.keepalive_interval', index=6,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='post_policy', full_name='gobgpapi.Table.post_policy', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -634,221 +1345,8 @@ _PEERCONF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=990,
-  serialized_end=1135,
-)
-
-
-_PEERINFO = _descriptor.Descriptor(
-  name='PeerInfo',
-  full_name='gobgpapi.PeerInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='bgp_state', full_name='gobgpapi.PeerInfo.bgp_state', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='admin_state', full_name='gobgpapi.PeerInfo.admin_state', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fsm_established_transitions', full_name='gobgpapi.PeerInfo.fsm_established_transitions', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='total_message_out', full_name='gobgpapi.PeerInfo.total_message_out', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='total_message_in', full_name='gobgpapi.PeerInfo.total_message_in', index=4,
-      number=5, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='update_message_out', full_name='gobgpapi.PeerInfo.update_message_out', index=5,
-      number=6, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='update_message_in', full_name='gobgpapi.PeerInfo.update_message_in', index=6,
-      number=7, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='keep_alive_message_out', full_name='gobgpapi.PeerInfo.keep_alive_message_out', index=7,
-      number=8, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='keep_alive_message_in', full_name='gobgpapi.PeerInfo.keep_alive_message_in', index=8,
-      number=9, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='open_message_out', full_name='gobgpapi.PeerInfo.open_message_out', index=9,
-      number=10, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='open_message_in', full_name='gobgpapi.PeerInfo.open_message_in', index=10,
-      number=11, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='notification_out', full_name='gobgpapi.PeerInfo.notification_out', index=11,
-      number=12, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='notification_in', full_name='gobgpapi.PeerInfo.notification_in', index=12,
-      number=13, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='refresh_message_out', full_name='gobgpapi.PeerInfo.refresh_message_out', index=13,
-      number=14, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='refresh_message_in', full_name='gobgpapi.PeerInfo.refresh_message_in', index=14,
-      number=15, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='discarded_out', full_name='gobgpapi.PeerInfo.discarded_out', index=15,
-      number=16, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='discarded_in', full_name='gobgpapi.PeerInfo.discarded_in', index=16,
-      number=17, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='uptime', full_name='gobgpapi.PeerInfo.uptime', index=17,
-      number=18, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='downtime', full_name='gobgpapi.PeerInfo.downtime', index=18,
-      number=19, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='last_error', full_name='gobgpapi.PeerInfo.last_error', index=19,
-      number=20, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='received', full_name='gobgpapi.PeerInfo.received', index=20,
-      number=21, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='accepted', full_name='gobgpapi.PeerInfo.accepted', index=21,
-      number=22, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='advertized', full_name='gobgpapi.PeerInfo.advertized', index=22,
-      number=23, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='out_q', full_name='gobgpapi.PeerInfo.out_q', index=23,
-      number=24, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='flops', full_name='gobgpapi.PeerInfo.flops', index=24,
-      number=25, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='negotiated_holdtime', full_name='gobgpapi.PeerInfo.negotiated_holdtime', index=25,
-      number=26, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='keepalive_interval', full_name='gobgpapi.PeerInfo.keepalive_interval', index=26,
-      number=27, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1138,
-  serialized_end=1797,
+  serialized_start=2210,
+  serialized_end=2347,
 )
 
 
@@ -860,14 +1358,560 @@ _PEER = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='conf', full_name='gobgpapi.Peer.conf', index=0,
+      name='families', full_name='gobgpapi.Peer.families', index=0,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='apply_policy', full_name='gobgpapi.Peer.apply_policy', index=1,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='conf', full_name='gobgpapi.Peer.conf', index=2,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ebgp_multihop', full_name='gobgpapi.Peer.ebgp_multihop', index=3,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='route_reflector', full_name='gobgpapi.Peer.route_reflector', index=4,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='info', full_name='gobgpapi.Peer.info', index=5,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='timers', full_name='gobgpapi.Peer.timers', index=6,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='transport', full_name='gobgpapi.Peer.transport', index=7,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='route_server', full_name='gobgpapi.Peer.route_server', index=8,
+      number=15, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2350,
+  serialized_end=2705,
+)
+
+
+_APPLYPOLICY = _descriptor.Descriptor(
+  name='ApplyPolicy',
+  full_name='gobgpapi.ApplyPolicy',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='in_policy', full_name='gobgpapi.ApplyPolicy.in_policy', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='info', full_name='gobgpapi.Peer.info', index=1,
+      name='export_policy', full_name='gobgpapi.ApplyPolicy.export_policy', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='import_policy', full_name='gobgpapi.ApplyPolicy.import_policy', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2708,
+  serialized_end=2870,
+)
+
+
+_PREFIXLIMIT = _descriptor.Descriptor(
+  name='PrefixLimit',
+  full_name='gobgpapi.PrefixLimit',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='family', full_name='gobgpapi.PrefixLimit.family', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='max_prefixes', full_name='gobgpapi.PrefixLimit.max_prefixes', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='shutdown_threshold_pct', full_name='gobgpapi.PrefixLimit.shutdown_threshold_pct', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2872,
+  serialized_end=2955,
+)
+
+
+_PEERCONF = _descriptor.Descriptor(
+  name='PeerConf',
+  full_name='gobgpapi.PeerConf',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='auth_password', full_name='gobgpapi.PeerConf.auth_password', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='gobgpapi.PeerConf.description', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='local_as', full_name='gobgpapi.PeerConf.local_as', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='neighbor_address', full_name='gobgpapi.PeerConf.neighbor_address', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='peer_as', full_name='gobgpapi.PeerConf.peer_as', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='peer_group', full_name='gobgpapi.PeerConf.peer_group', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='peer_type', full_name='gobgpapi.PeerConf.peer_type', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remove_private_as', full_name='gobgpapi.PeerConf.remove_private_as', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='route_flap_damping', full_name='gobgpapi.PeerConf.route_flap_damping', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='send_community', full_name='gobgpapi.PeerConf.send_community', index=9,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remote_cap', full_name='gobgpapi.PeerConf.remote_cap', index=10,
+      number=11, type=12, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='local_cap', full_name='gobgpapi.PeerConf.local_cap', index=11,
+      number=12, type=12, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='gobgpapi.PeerConf.id', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='prefix_limits', full_name='gobgpapi.PeerConf.prefix_limits', index=13,
+      number=14, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2958,
+  serialized_end=3288,
+)
+
+
+_EBGPMULTIHOP = _descriptor.Descriptor(
+  name='EbgpMultihop',
+  full_name='gobgpapi.EbgpMultihop',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='enabled', full_name='gobgpapi.EbgpMultihop.enabled', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='multihop_ttl', full_name='gobgpapi.EbgpMultihop.multihop_ttl', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3290,
+  serialized_end=3343,
+)
+
+
+_ROUTEREFLECTOR = _descriptor.Descriptor(
+  name='RouteReflector',
+  full_name='gobgpapi.RouteReflector',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='route_reflector_client', full_name='gobgpapi.RouteReflector.route_reflector_client', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='route_reflector_cluster_id', full_name='gobgpapi.RouteReflector.route_reflector_cluster_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3345,
+  serialized_end=3429,
+)
+
+
+_PEERSTATE = _descriptor.Descriptor(
+  name='PeerState',
+  full_name='gobgpapi.PeerState',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='auth_password', full_name='gobgpapi.PeerState.auth_password', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='gobgpapi.PeerState.description', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='local_as', full_name='gobgpapi.PeerState.local_as', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='messages', full_name='gobgpapi.PeerState.messages', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='neighbor_address', full_name='gobgpapi.PeerState.neighbor_address', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='peer_as', full_name='gobgpapi.PeerState.peer_as', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='peer_group', full_name='gobgpapi.PeerState.peer_group', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='peer_type', full_name='gobgpapi.PeerState.peer_type', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='queues', full_name='gobgpapi.PeerState.queues', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remove_private_as', full_name='gobgpapi.PeerState.remove_private_as', index=9,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='route_flap_damping', full_name='gobgpapi.PeerState.route_flap_damping', index=10,
+      number=11, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='send_community', full_name='gobgpapi.PeerState.send_community', index=11,
+      number=12, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='session_state', full_name='gobgpapi.PeerState.session_state', index=12,
+      number=13, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='supported_capabilities', full_name='gobgpapi.PeerState.supported_capabilities', index=13,
+      number=14, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='bgp_state', full_name='gobgpapi.PeerState.bgp_state', index=14,
+      number=15, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='admin_state', full_name='gobgpapi.PeerState.admin_state', index=15,
+      number=16, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='received', full_name='gobgpapi.PeerState.received', index=16,
+      number=17, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='accepted', full_name='gobgpapi.PeerState.accepted', index=17,
+      number=18, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='advertised', full_name='gobgpapi.PeerState.advertised', index=18,
+      number=19, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='out_q', full_name='gobgpapi.PeerState.out_q', index=19,
+      number=20, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='flops', full_name='gobgpapi.PeerState.flops', index=20,
+      number=21, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3432,
+  serialized_end=3919,
+)
+
+
+_MESSAGES = _descriptor.Descriptor(
+  name='Messages',
+  full_name='gobgpapi.Messages',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='received', full_name='gobgpapi.Messages.received', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sent', full_name='gobgpapi.Messages.sent', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -885,8 +1929,386 @@ _PEER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1799,
-  serialized_end=1873,
+  serialized_start=3921,
+  serialized_end=4001,
+)
+
+
+_MESSAGE = _descriptor.Descriptor(
+  name='Message',
+  full_name='gobgpapi.Message',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='NOTIFICATION', full_name='gobgpapi.Message.NOTIFICATION', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='UPDATE', full_name='gobgpapi.Message.UPDATE', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='OPEN', full_name='gobgpapi.Message.OPEN', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='KEEPALIVE', full_name='gobgpapi.Message.KEEPALIVE', index=3,
+      number=4, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='REFRESH', full_name='gobgpapi.Message.REFRESH', index=4,
+      number=5, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='DISCARDED', full_name='gobgpapi.Message.DISCARDED', index=5,
+      number=6, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='TOTAL', full_name='gobgpapi.Message.TOTAL', index=6,
+      number=7, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4004,
+  serialized_end=4135,
+)
+
+
+_QUEUES = _descriptor.Descriptor(
+  name='Queues',
+  full_name='gobgpapi.Queues',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='input', full_name='gobgpapi.Queues.input', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='output', full_name='gobgpapi.Queues.output', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4137,
+  serialized_end=4176,
+)
+
+
+_TIMERS = _descriptor.Descriptor(
+  name='Timers',
+  full_name='gobgpapi.Timers',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='config', full_name='gobgpapi.Timers.config', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='state', full_name='gobgpapi.Timers.state', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4178,
+  serialized_end=4264,
+)
+
+
+_TIMERSCONFIG = _descriptor.Descriptor(
+  name='TimersConfig',
+  full_name='gobgpapi.TimersConfig',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='connect_retry', full_name='gobgpapi.TimersConfig.connect_retry', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hold_time', full_name='gobgpapi.TimersConfig.hold_time', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='keepalive_interval', full_name='gobgpapi.TimersConfig.keepalive_interval', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='minimum_advertisement_interval', full_name='gobgpapi.TimersConfig.minimum_advertisement_interval', index=3,
+      number=4, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4266,
+  serialized_end=4390,
+)
+
+
+_TIMERSSTATE = _descriptor.Descriptor(
+  name='TimersState',
+  full_name='gobgpapi.TimersState',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='connect_retry', full_name='gobgpapi.TimersState.connect_retry', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hold_time', full_name='gobgpapi.TimersState.hold_time', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='keepalive_interval', full_name='gobgpapi.TimersState.keepalive_interval', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='minimum_advertisement_interval', full_name='gobgpapi.TimersState.minimum_advertisement_interval', index=3,
+      number=4, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='negotiated_hold_time', full_name='gobgpapi.TimersState.negotiated_hold_time', index=4,
+      number=5, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='uptime', full_name='gobgpapi.TimersState.uptime', index=5,
+      number=6, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='downtime', full_name='gobgpapi.TimersState.downtime', index=6,
+      number=7, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4393,
+  serialized_end=4580,
+)
+
+
+_TRANSPORT = _descriptor.Descriptor(
+  name='Transport',
+  full_name='gobgpapi.Transport',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='local_address', full_name='gobgpapi.Transport.local_address', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='local_port', full_name='gobgpapi.Transport.local_port', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='mtu_discovery', full_name='gobgpapi.Transport.mtu_discovery', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='passive_mode', full_name='gobgpapi.Transport.passive_mode', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remote_address', full_name='gobgpapi.Transport.remote_address', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remote_port', full_name='gobgpapi.Transport.remote_port', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tcp_mss', full_name='gobgpapi.Transport.tcp_mss', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4583,
+  serialized_end=4744,
+)
+
+
+_ROUTESERVER = _descriptor.Descriptor(
+  name='RouteServer',
+  full_name='gobgpapi.RouteServer',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='route_server_client', full_name='gobgpapi.RouteServer.route_server_client', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4746,
+  serialized_end=4788,
 )
 
 
@@ -905,7 +2327,104 @@ _PREFIX = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='mask_length_range', full_name='gobgpapi.Prefix.mask_length_range', index=1,
+      name='mask_length_min', full_name='gobgpapi.Prefix.mask_length_min', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='mask_length_max', full_name='gobgpapi.Prefix.mask_length_max', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4790,
+  serialized_end=4867,
+)
+
+
+_DEFINEDSET = _descriptor.Descriptor(
+  name='DefinedSet',
+  full_name='gobgpapi.DefinedSet',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='gobgpapi.DefinedSet.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='gobgpapi.DefinedSet.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='list', full_name='gobgpapi.DefinedSet.list', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='prefixes', full_name='gobgpapi.DefinedSet.prefixes', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4869,
+  serialized_end=4982,
+)
+
+
+_MATCHSET = _descriptor.Descriptor(
+  name='MatchSet',
+  full_name='gobgpapi.MatchSet',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='gobgpapi.MatchSet.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='gobgpapi.MatchSet.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -923,129 +2442,8 @@ _PREFIX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1875,
-  serialized_end=1929,
-)
-
-
-_PREFIXSET = _descriptor.Descriptor(
-  name='PrefixSet',
-  full_name='gobgpapi.PrefixSet',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='prefix_set_name', full_name='gobgpapi.PrefixSet.prefix_set_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='prefix_list', full_name='gobgpapi.PrefixSet.prefix_list', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_set_options', full_name='gobgpapi.PrefixSet.match_set_options', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1931,
-  serialized_end=2033,
-)
-
-
-_NEIGHBOR = _descriptor.Descriptor(
-  name='Neighbor',
-  full_name='gobgpapi.Neighbor',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='address', full_name='gobgpapi.Neighbor.address', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2035,
-  serialized_end=2062,
-)
-
-
-_NEIGHBORSET = _descriptor.Descriptor(
-  name='NeighborSet',
-  full_name='gobgpapi.NeighborSet',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='neighbor_set_name', full_name='gobgpapi.NeighborSet.neighbor_set_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='neighbor_list', full_name='gobgpapi.NeighborSet.neighbor_list', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_set_options', full_name='gobgpapi.NeighborSet.match_set_options', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2064,
-  serialized_end=2174,
+  serialized_start=4984,
+  serialized_end=5043,
 )
 
 
@@ -1057,291 +2455,14 @@ _ASPATHLENGTH = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='gobgpapi.AsPathLength.value', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='type', full_name='gobgpapi.AsPathLength.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='operator', full_name='gobgpapi.AsPathLength.operator', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2176,
-  serialized_end=2223,
-)
-
-
-_ASPATHSET = _descriptor.Descriptor(
-  name='AsPathSet',
-  full_name='gobgpapi.AsPathSet',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='as_path_set_name', full_name='gobgpapi.AsPathSet.as_path_set_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='as_path_members', full_name='gobgpapi.AsPathSet.as_path_members', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_set_options', full_name='gobgpapi.AsPathSet.match_set_options', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2225,
-  serialized_end=2314,
-)
-
-
-_COMMUNITYSET = _descriptor.Descriptor(
-  name='CommunitySet',
-  full_name='gobgpapi.CommunitySet',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='community_set_name', full_name='gobgpapi.CommunitySet.community_set_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='community_members', full_name='gobgpapi.CommunitySet.community_members', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_set_options', full_name='gobgpapi.CommunitySet.match_set_options', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2316,
-  serialized_end=2412,
-)
-
-
-_EXTCOMMUNITYSET = _descriptor.Descriptor(
-  name='ExtCommunitySet',
-  full_name='gobgpapi.ExtCommunitySet',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='ext_community_set_name', full_name='gobgpapi.ExtCommunitySet.ext_community_set_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='ext_community_members', full_name='gobgpapi.ExtCommunitySet.ext_community_members', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_set_options', full_name='gobgpapi.ExtCommunitySet.match_set_options', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2414,
-  serialized_end=2521,
-)
-
-
-_CONDITIONS = _descriptor.Descriptor(
-  name='Conditions',
-  full_name='gobgpapi.Conditions',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='match_prefix_set', full_name='gobgpapi.Conditions.match_prefix_set', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_neighbor_set', full_name='gobgpapi.Conditions.match_neighbor_set', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_as_path_length', full_name='gobgpapi.Conditions.match_as_path_length', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_as_path_set', full_name='gobgpapi.Conditions.match_as_path_set', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_community_set', full_name='gobgpapi.Conditions.match_community_set', index=4,
-      number=5, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_ext_community_set', full_name='gobgpapi.Conditions.match_ext_community_set', index=5,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2524,
-  serialized_end=2849,
-)
-
-
-_COMMUNITYACTION = _descriptor.Descriptor(
-  name='CommunityAction',
-  full_name='gobgpapi.CommunityAction',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='communities', full_name='gobgpapi.CommunityAction.communities', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='options', full_name='gobgpapi.CommunityAction.options', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2851,
-  serialized_end=2906,
-)
-
-
-_ASPREPENDACTION = _descriptor.Descriptor(
-  name='AsPrependAction',
-  full_name='gobgpapi.AsPrependAction',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='as', full_name='gobgpapi.AsPrependAction.as', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='repeatn', full_name='gobgpapi.AsPrependAction.repeatn', index=1,
+      name='length', full_name='gobgpapi.AsPathLength.length', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1359,8 +2480,233 @@ _ASPREPENDACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2908,
-  serialized_end=2954,
+  serialized_start=5045,
+  serialized_end=5117,
+)
+
+
+_CONDITIONS = _descriptor.Descriptor(
+  name='Conditions',
+  full_name='gobgpapi.Conditions',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='prefix_set', full_name='gobgpapi.Conditions.prefix_set', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='neighbor_set', full_name='gobgpapi.Conditions.neighbor_set', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='as_path_length', full_name='gobgpapi.Conditions.as_path_length', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='as_path_set', full_name='gobgpapi.Conditions.as_path_set', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='community_set', full_name='gobgpapi.Conditions.community_set', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ext_community_set', full_name='gobgpapi.Conditions.ext_community_set', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rpki_result', full_name='gobgpapi.Conditions.rpki_result', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5120,
+  serialized_end=5414,
+)
+
+
+_COMMUNITYACTION = _descriptor.Descriptor(
+  name='CommunityAction',
+  full_name='gobgpapi.CommunityAction',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='gobgpapi.CommunityAction.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='communities', full_name='gobgpapi.CommunityAction.communities', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5416,
+  serialized_end=5499,
+)
+
+
+_MEDACTION = _descriptor.Descriptor(
+  name='MedAction',
+  full_name='gobgpapi.MedAction',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='gobgpapi.MedAction.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='gobgpapi.MedAction.value', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5501,
+  serialized_end=5566,
+)
+
+
+_ASPREPENDACTION = _descriptor.Descriptor(
+  name='AsPrependAction',
+  full_name='gobgpapi.AsPrependAction',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='asn', full_name='gobgpapi.AsPrependAction.asn', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='repeat', full_name='gobgpapi.AsPrependAction.repeat', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='use_left_most', full_name='gobgpapi.AsPrependAction.use_left_most', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5568,
+  serialized_end=5637,
+)
+
+
+_NEXTHOPACTION = _descriptor.Descriptor(
+  name='NexthopAction',
+  full_name='gobgpapi.NexthopAction',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='address', full_name='gobgpapi.NexthopAction.address', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5639,
+  serialized_end=5671,
 )
 
 
@@ -1373,8 +2719,8 @@ _ACTIONS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='route_action', full_name='gobgpapi.Actions.route_action', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1387,8 +2733,8 @@ _ACTIONS = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='med', full_name='gobgpapi.Actions.med', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1406,6 +2752,13 @@ _ACTIONS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='nexthop', full_name='gobgpapi.Actions.nexthop', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1418,8 +2771,8 @@ _ACTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2957,
-  serialized_end=3144,
+  serialized_start=5674,
+  serialized_end=5947,
 )
 
 
@@ -1431,7 +2784,7 @@ _STATEMENT = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='statement_neme', full_name='gobgpapi.Statement.statement_neme', index=0,
+      name='name', full_name='gobgpapi.Statement.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1463,27 +2816,27 @@ _STATEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3146,
-  serialized_end=3259,
+  serialized_start=5949,
+  serialized_end=6052,
 )
 
 
-_POLICYDEFINITION = _descriptor.Descriptor(
-  name='PolicyDefinition',
-  full_name='gobgpapi.PolicyDefinition',
+_POLICY = _descriptor.Descriptor(
+  name='Policy',
+  full_name='gobgpapi.Policy',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='policy_definition_name', full_name='gobgpapi.PolicyDefinition.policy_definition_name', index=0,
+      name='name', full_name='gobgpapi.Policy.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='statement_list', full_name='gobgpapi.PolicyDefinition.statement_list', index=1,
+      name='statements', full_name='gobgpapi.Policy.statements', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1501,57 +2854,50 @@ _POLICYDEFINITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3261,
-  serialized_end=3356,
+  serialized_start=6054,
+  serialized_end=6117,
 )
 
 
-_APPLYPOLICY = _descriptor.Descriptor(
-  name='ApplyPolicy',
-  full_name='gobgpapi.ApplyPolicy',
+_POLICYASSIGNMENT = _descriptor.Descriptor(
+  name='PolicyAssignment',
+  full_name='gobgpapi.PolicyAssignment',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='import_policies', full_name='gobgpapi.ApplyPolicy.import_policies', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='type', full_name='gobgpapi.PolicyAssignment.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='default_import_policy', full_name='gobgpapi.ApplyPolicy.default_import_policy', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='resource', full_name='gobgpapi.PolicyAssignment.resource', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='gobgpapi.PolicyAssignment.name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='export_policies', full_name='gobgpapi.ApplyPolicy.export_policies', index=2,
-      number=3, type=11, cpp_type=10, label=3,
+      name='policies', full_name='gobgpapi.PolicyAssignment.policies', index=3,
+      number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='default_export_policy', full_name='gobgpapi.ApplyPolicy.default_export_policy', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='in_policies', full_name='gobgpapi.ApplyPolicy.in_policies', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='default_in_policy', full_name='gobgpapi.ApplyPolicy.default_in_policy', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='default', full_name='gobgpapi.PolicyAssignment.default', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1567,8 +2913,8 @@ _APPLYPOLICY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3359,
-  serialized_end=3616,
+  serialized_start=6120,
+  serialized_end=6302,
 )
 
 
@@ -1598,8 +2944,8 @@ _MRTMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3618,
-  serialized_end=3644,
+  serialized_start=6304,
+  serialized_end=6330,
 )
 
 
@@ -1617,6 +2963,13 @@ _RPKICONF = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='remote_port', full_name='gobgpapi.RPKIConf.remote_port', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1629,8 +2982,8 @@ _RPKICONF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3646,
-  serialized_end=3673,
+  serialized_start=6332,
+  serialized_end=6380,
 )
 
 
@@ -1656,15 +3009,106 @@ _RPKISTATE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='received_ipv4', full_name='gobgpapi.RPKIState.received_ipv4', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      name='up', full_name='gobgpapi.RPKIState.up', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='record_ipv4', full_name='gobgpapi.RPKIState.record_ipv4', index=3,
+      number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='received_ipv6', full_name='gobgpapi.RPKIState.received_ipv6', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      name='record_ipv6', full_name='gobgpapi.RPKIState.record_ipv6', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='prefix_ipv4', full_name='gobgpapi.RPKIState.prefix_ipv4', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='prefix_ipv6', full_name='gobgpapi.RPKIState.prefix_ipv6', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serial', full_name='gobgpapi.RPKIState.serial', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='received_ipv4', full_name='gobgpapi.RPKIState.received_ipv4', index=8,
+      number=9, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='received_ipv6', full_name='gobgpapi.RPKIState.received_ipv6', index=9,
+      number=10, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serial_notify', full_name='gobgpapi.RPKIState.serial_notify', index=10,
+      number=11, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cache_reset', full_name='gobgpapi.RPKIState.cache_reset', index=11,
+      number=12, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cache_response', full_name='gobgpapi.RPKIState.cache_response', index=12,
+      number=13, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='end_of_data', full_name='gobgpapi.RPKIState.end_of_data', index=13,
+      number=14, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='error', full_name='gobgpapi.RPKIState.error', index=14,
+      number=15, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serial_query', full_name='gobgpapi.RPKIState.serial_query', index=15,
+      number=16, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reset_query', full_name='gobgpapi.RPKIState.reset_query', index=16,
+      number=17, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1681,8 +3125,8 @@ _RPKISTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3675,
-  serialized_end=3766,
+  serialized_start=6383,
+  serialized_end=6733,
 )
 
 
@@ -1719,8 +3163,8 @@ _RPKI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3768,
-  serialized_end=3844,
+  serialized_start=6735,
+  serialized_end=6811,
 )
 
 
@@ -1759,6 +3203,13 @@ _ROA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='conf', full_name='gobgpapi.ROA.conf', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1771,8 +3222,8 @@ _ROA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3846,
-  serialized_end=3914,
+  serialized_start=6813,
+  serialized_end=6915,
 )
 
 
@@ -1823,78 +3274,223 @@ _VRF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3916,
-  serialized_end=3985,
+  serialized_start=6917,
+  serialized_end=6986,
+)
+
+
+_GLOBAL = _descriptor.Descriptor(
+  name='Global',
+  full_name='gobgpapi.Global',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='as', full_name='gobgpapi.Global.as', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='router_id', full_name='gobgpapi.Global.router_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='listen_port', full_name='gobgpapi.Global.listen_port', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='listen_addresses', full_name='gobgpapi.Global.listen_addresses', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='families', full_name='gobgpapi.Global.families', index=4,
+      number=5, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='mpls_label_min', full_name='gobgpapi.Global.mpls_label_min', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='mpls_label_max', full_name='gobgpapi.Global.mpls_label_max', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6989,
+  serialized_end=7141,
 )
 
 _ERROR.fields_by_name['code'].enum_type = _ERROR_ERRORCODE
 _ERROR_ERRORCODE.containing_type = _ERROR
 _ARGUMENTS.fields_by_name['resource'].enum_type = _RESOURCE
+_MODPATHARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
 _MODPATHARGUMENTS.fields_by_name['resource'].enum_type = _RESOURCE
-_MODPATHARGUMENTS.fields_by_name['paths'].message_type = _PATH
-_POLICYARGUMENTS.fields_by_name['resource'].enum_type = _RESOURCE
-_POLICYARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
-_POLICYARGUMENTS.fields_by_name['policy_definition'].message_type = _POLICYDEFINITION
-_POLICYARGUMENTS.fields_by_name['apply_policy'].message_type = _APPLYPOLICY
+_MODPATHARGUMENTS.fields_by_name['path'].message_type = _PATH
+_MODPATHSARGUMENTS.fields_by_name['resource'].enum_type = _RESOURCE
+_MODPATHSARGUMENTS.fields_by_name['paths'].message_type = _PATH
+_MODNEIGHBORARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
+_MODNEIGHBORARGUMENTS.fields_by_name['peer'].message_type = _PEER
 _MRTARGUMENTS.fields_by_name['resource'].enum_type = _RESOURCE
+_MODMRTARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
+_MODBMPARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
+_MODBMPARGUMENTS.fields_by_name['type'].enum_type = _MODBMPARGUMENTS_MONITORINGPOLICY
+_MODBMPARGUMENTS_MONITORINGPOLICY.containing_type = _MODBMPARGUMENTS
+_MODRPKIARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
 _MODVRFARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
 _MODVRFARGUMENTS.fields_by_name['vrf'].message_type = _VRF
+_MODDEFINEDSETARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
+_MODDEFINEDSETARGUMENTS.fields_by_name['set'].message_type = _DEFINEDSET
+_MODSTATEMENTARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
+_MODSTATEMENTARGUMENTS.fields_by_name['statement'].message_type = _STATEMENT
+_MODPOLICYARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
+_MODPOLICYARGUMENTS.fields_by_name['policy'].message_type = _POLICY
+_MODPOLICYASSIGNMENTARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
+_MODPOLICYASSIGNMENTARGUMENTS.fields_by_name['assignment'].message_type = _POLICYASSIGNMENT
+_MODGLOBALCONFIGARGUMENTS.fields_by_name['operation'].enum_type = _OPERATION
+_MODGLOBALCONFIGARGUMENTS.fields_by_name['global'].message_type = _GLOBAL
 _DESTINATION.fields_by_name['paths'].message_type = _PATH
+_TABLE.fields_by_name['type'].enum_type = _RESOURCE
+_TABLE.fields_by_name['destinations'].message_type = _DESTINATION
+_PEER.fields_by_name['apply_policy'].message_type = _APPLYPOLICY
 _PEER.fields_by_name['conf'].message_type = _PEERCONF
-_PEER.fields_by_name['info'].message_type = _PEERINFO
-_PREFIXSET.fields_by_name['prefix_list'].message_type = _PREFIX
-_NEIGHBORSET.fields_by_name['neighbor_list'].message_type = _NEIGHBOR
-_CONDITIONS.fields_by_name['match_prefix_set'].message_type = _PREFIXSET
-_CONDITIONS.fields_by_name['match_neighbor_set'].message_type = _NEIGHBORSET
-_CONDITIONS.fields_by_name['match_as_path_length'].message_type = _ASPATHLENGTH
-_CONDITIONS.fields_by_name['match_as_path_set'].message_type = _ASPATHSET
-_CONDITIONS.fields_by_name['match_community_set'].message_type = _COMMUNITYSET
-_CONDITIONS.fields_by_name['match_ext_community_set'].message_type = _EXTCOMMUNITYSET
+_PEER.fields_by_name['ebgp_multihop'].message_type = _EBGPMULTIHOP
+_PEER.fields_by_name['route_reflector'].message_type = _ROUTEREFLECTOR
+_PEER.fields_by_name['info'].message_type = _PEERSTATE
+_PEER.fields_by_name['timers'].message_type = _TIMERS
+_PEER.fields_by_name['transport'].message_type = _TRANSPORT
+_PEER.fields_by_name['route_server'].message_type = _ROUTESERVER
+_APPLYPOLICY.fields_by_name['in_policy'].message_type = _POLICYASSIGNMENT
+_APPLYPOLICY.fields_by_name['export_policy'].message_type = _POLICYASSIGNMENT
+_APPLYPOLICY.fields_by_name['import_policy'].message_type = _POLICYASSIGNMENT
+_PEERCONF.fields_by_name['prefix_limits'].message_type = _PREFIXLIMIT
+_PEERSTATE.fields_by_name['messages'].message_type = _MESSAGES
+_PEERSTATE.fields_by_name['queues'].message_type = _QUEUES
+_MESSAGES.fields_by_name['received'].message_type = _MESSAGE
+_MESSAGES.fields_by_name['sent'].message_type = _MESSAGE
+_TIMERS.fields_by_name['config'].message_type = _TIMERSCONFIG
+_TIMERS.fields_by_name['state'].message_type = _TIMERSSTATE
+_DEFINEDSET.fields_by_name['type'].enum_type = _DEFINEDTYPE
+_DEFINEDSET.fields_by_name['prefixes'].message_type = _PREFIX
+_MATCHSET.fields_by_name['type'].enum_type = _MATCHTYPE
+_ASPATHLENGTH.fields_by_name['type'].enum_type = _ASPATHLENGTHTYPE
+_CONDITIONS.fields_by_name['prefix_set'].message_type = _MATCHSET
+_CONDITIONS.fields_by_name['neighbor_set'].message_type = _MATCHSET
+_CONDITIONS.fields_by_name['as_path_length'].message_type = _ASPATHLENGTH
+_CONDITIONS.fields_by_name['as_path_set'].message_type = _MATCHSET
+_CONDITIONS.fields_by_name['community_set'].message_type = _MATCHSET
+_CONDITIONS.fields_by_name['ext_community_set'].message_type = _MATCHSET
+_COMMUNITYACTION.fields_by_name['type'].enum_type = _COMMUNITYACTIONTYPE
+_MEDACTION.fields_by_name['type'].enum_type = _MEDACTIONTYPE
+_ACTIONS.fields_by_name['route_action'].enum_type = _ROUTEACTION
 _ACTIONS.fields_by_name['community'].message_type = _COMMUNITYACTION
+_ACTIONS.fields_by_name['med'].message_type = _MEDACTION
 _ACTIONS.fields_by_name['as_prepend'].message_type = _ASPREPENDACTION
 _ACTIONS.fields_by_name['ext_community'].message_type = _COMMUNITYACTION
+_ACTIONS.fields_by_name['nexthop'].message_type = _NEXTHOPACTION
 _STATEMENT.fields_by_name['conditions'].message_type = _CONDITIONS
 _STATEMENT.fields_by_name['actions'].message_type = _ACTIONS
-_POLICYDEFINITION.fields_by_name['statement_list'].message_type = _STATEMENT
-_APPLYPOLICY.fields_by_name['import_policies'].message_type = _POLICYDEFINITION
-_APPLYPOLICY.fields_by_name['export_policies'].message_type = _POLICYDEFINITION
-_APPLYPOLICY.fields_by_name['in_policies'].message_type = _POLICYDEFINITION
+_POLICY.fields_by_name['statements'].message_type = _STATEMENT
+_POLICYASSIGNMENT.fields_by_name['type'].enum_type = _POLICYTYPE
+_POLICYASSIGNMENT.fields_by_name['resource'].enum_type = _RESOURCE
+_POLICYASSIGNMENT.fields_by_name['policies'].message_type = _POLICY
+_POLICYASSIGNMENT.fields_by_name['default'].enum_type = _ROUTEACTION
 _RPKI.fields_by_name['conf'].message_type = _RPKICONF
 _RPKI.fields_by_name['state'].message_type = _RPKISTATE
+_ROA.fields_by_name['conf'].message_type = _RPKICONF
 DESCRIPTOR.message_types_by_name['Error'] = _ERROR
 DESCRIPTOR.message_types_by_name['Arguments'] = _ARGUMENTS
 DESCRIPTOR.message_types_by_name['ModPathArguments'] = _MODPATHARGUMENTS
-DESCRIPTOR.message_types_by_name['PolicyArguments'] = _POLICYARGUMENTS
+DESCRIPTOR.message_types_by_name['ModPathResponse'] = _MODPATHRESPONSE
+DESCRIPTOR.message_types_by_name['ModPathsArguments'] = _MODPATHSARGUMENTS
+DESCRIPTOR.message_types_by_name['ModNeighborArguments'] = _MODNEIGHBORARGUMENTS
 DESCRIPTOR.message_types_by_name['MrtArguments'] = _MRTARGUMENTS
+DESCRIPTOR.message_types_by_name['ModMrtArguments'] = _MODMRTARGUMENTS
+DESCRIPTOR.message_types_by_name['ModBmpArguments'] = _MODBMPARGUMENTS
+DESCRIPTOR.message_types_by_name['ModRpkiArguments'] = _MODRPKIARGUMENTS
 DESCRIPTOR.message_types_by_name['ModVrfArguments'] = _MODVRFARGUMENTS
+DESCRIPTOR.message_types_by_name['ModDefinedSetArguments'] = _MODDEFINEDSETARGUMENTS
+DESCRIPTOR.message_types_by_name['ModStatementArguments'] = _MODSTATEMENTARGUMENTS
+DESCRIPTOR.message_types_by_name['ModPolicyArguments'] = _MODPOLICYARGUMENTS
+DESCRIPTOR.message_types_by_name['ModPolicyAssignmentArguments'] = _MODPOLICYASSIGNMENTARGUMENTS
+DESCRIPTOR.message_types_by_name['ModGlobalConfigArguments'] = _MODGLOBALCONFIGARGUMENTS
 DESCRIPTOR.message_types_by_name['Path'] = _PATH
 DESCRIPTOR.message_types_by_name['Destination'] = _DESTINATION
-DESCRIPTOR.message_types_by_name['PeerConf'] = _PEERCONF
-DESCRIPTOR.message_types_by_name['PeerInfo'] = _PEERINFO
+DESCRIPTOR.message_types_by_name['Table'] = _TABLE
 DESCRIPTOR.message_types_by_name['Peer'] = _PEER
+DESCRIPTOR.message_types_by_name['ApplyPolicy'] = _APPLYPOLICY
+DESCRIPTOR.message_types_by_name['PrefixLimit'] = _PREFIXLIMIT
+DESCRIPTOR.message_types_by_name['PeerConf'] = _PEERCONF
+DESCRIPTOR.message_types_by_name['EbgpMultihop'] = _EBGPMULTIHOP
+DESCRIPTOR.message_types_by_name['RouteReflector'] = _ROUTEREFLECTOR
+DESCRIPTOR.message_types_by_name['PeerState'] = _PEERSTATE
+DESCRIPTOR.message_types_by_name['Messages'] = _MESSAGES
+DESCRIPTOR.message_types_by_name['Message'] = _MESSAGE
+DESCRIPTOR.message_types_by_name['Queues'] = _QUEUES
+DESCRIPTOR.message_types_by_name['Timers'] = _TIMERS
+DESCRIPTOR.message_types_by_name['TimersConfig'] = _TIMERSCONFIG
+DESCRIPTOR.message_types_by_name['TimersState'] = _TIMERSSTATE
+DESCRIPTOR.message_types_by_name['Transport'] = _TRANSPORT
+DESCRIPTOR.message_types_by_name['RouteServer'] = _ROUTESERVER
 DESCRIPTOR.message_types_by_name['Prefix'] = _PREFIX
-DESCRIPTOR.message_types_by_name['PrefixSet'] = _PREFIXSET
-DESCRIPTOR.message_types_by_name['Neighbor'] = _NEIGHBOR
-DESCRIPTOR.message_types_by_name['NeighborSet'] = _NEIGHBORSET
+DESCRIPTOR.message_types_by_name['DefinedSet'] = _DEFINEDSET
+DESCRIPTOR.message_types_by_name['MatchSet'] = _MATCHSET
 DESCRIPTOR.message_types_by_name['AsPathLength'] = _ASPATHLENGTH
-DESCRIPTOR.message_types_by_name['AsPathSet'] = _ASPATHSET
-DESCRIPTOR.message_types_by_name['CommunitySet'] = _COMMUNITYSET
-DESCRIPTOR.message_types_by_name['ExtCommunitySet'] = _EXTCOMMUNITYSET
 DESCRIPTOR.message_types_by_name['Conditions'] = _CONDITIONS
 DESCRIPTOR.message_types_by_name['CommunityAction'] = _COMMUNITYACTION
+DESCRIPTOR.message_types_by_name['MedAction'] = _MEDACTION
 DESCRIPTOR.message_types_by_name['AsPrependAction'] = _ASPREPENDACTION
+DESCRIPTOR.message_types_by_name['NexthopAction'] = _NEXTHOPACTION
 DESCRIPTOR.message_types_by_name['Actions'] = _ACTIONS
 DESCRIPTOR.message_types_by_name['Statement'] = _STATEMENT
-DESCRIPTOR.message_types_by_name['PolicyDefinition'] = _POLICYDEFINITION
-DESCRIPTOR.message_types_by_name['ApplyPolicy'] = _APPLYPOLICY
+DESCRIPTOR.message_types_by_name['Policy'] = _POLICY
+DESCRIPTOR.message_types_by_name['PolicyAssignment'] = _POLICYASSIGNMENT
 DESCRIPTOR.message_types_by_name['MrtMessage'] = _MRTMESSAGE
 DESCRIPTOR.message_types_by_name['RPKIConf'] = _RPKICONF
 DESCRIPTOR.message_types_by_name['RPKIState'] = _RPKISTATE
 DESCRIPTOR.message_types_by_name['RPKI'] = _RPKI
 DESCRIPTOR.message_types_by_name['ROA'] = _ROA
 DESCRIPTOR.message_types_by_name['Vrf'] = _VRF
+DESCRIPTOR.message_types_by_name['Global'] = _GLOBAL
 DESCRIPTOR.enum_types_by_name['Resource'] = _RESOURCE
 DESCRIPTOR.enum_types_by_name['Operation'] = _OPERATION
+DESCRIPTOR.enum_types_by_name['DefinedType'] = _DEFINEDTYPE
+DESCRIPTOR.enum_types_by_name['MatchType'] = _MATCHTYPE
+DESCRIPTOR.enum_types_by_name['AsPathLengthType'] = _ASPATHLENGTHTYPE
+DESCRIPTOR.enum_types_by_name['RouteAction'] = _ROUTEACTION
+DESCRIPTOR.enum_types_by_name['CommunityActionType'] = _COMMUNITYACTIONTYPE
+DESCRIPTOR.enum_types_by_name['MedActionType'] = _MEDACTIONTYPE
+DESCRIPTOR.enum_types_by_name['PolicyType'] = _POLICYTYPE
 
 Error = _reflection.GeneratedProtocolMessageType('Error', (_message.Message,), dict(
   DESCRIPTOR = _ERROR,
@@ -1917,12 +3513,26 @@ ModPathArguments = _reflection.GeneratedProtocolMessageType('ModPathArguments', 
   ))
 _sym_db.RegisterMessage(ModPathArguments)
 
-PolicyArguments = _reflection.GeneratedProtocolMessageType('PolicyArguments', (_message.Message,), dict(
-  DESCRIPTOR = _POLICYARGUMENTS,
+ModPathResponse = _reflection.GeneratedProtocolMessageType('ModPathResponse', (_message.Message,), dict(
+  DESCRIPTOR = _MODPATHRESPONSE,
   __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.PolicyArguments)
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModPathResponse)
   ))
-_sym_db.RegisterMessage(PolicyArguments)
+_sym_db.RegisterMessage(ModPathResponse)
+
+ModPathsArguments = _reflection.GeneratedProtocolMessageType('ModPathsArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODPATHSARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModPathsArguments)
+  ))
+_sym_db.RegisterMessage(ModPathsArguments)
+
+ModNeighborArguments = _reflection.GeneratedProtocolMessageType('ModNeighborArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODNEIGHBORARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModNeighborArguments)
+  ))
+_sym_db.RegisterMessage(ModNeighborArguments)
 
 MrtArguments = _reflection.GeneratedProtocolMessageType('MrtArguments', (_message.Message,), dict(
   DESCRIPTOR = _MRTARGUMENTS,
@@ -1931,12 +3541,68 @@ MrtArguments = _reflection.GeneratedProtocolMessageType('MrtArguments', (_messag
   ))
 _sym_db.RegisterMessage(MrtArguments)
 
+ModMrtArguments = _reflection.GeneratedProtocolMessageType('ModMrtArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODMRTARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModMrtArguments)
+  ))
+_sym_db.RegisterMessage(ModMrtArguments)
+
+ModBmpArguments = _reflection.GeneratedProtocolMessageType('ModBmpArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODBMPARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModBmpArguments)
+  ))
+_sym_db.RegisterMessage(ModBmpArguments)
+
+ModRpkiArguments = _reflection.GeneratedProtocolMessageType('ModRpkiArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODRPKIARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModRpkiArguments)
+  ))
+_sym_db.RegisterMessage(ModRpkiArguments)
+
 ModVrfArguments = _reflection.GeneratedProtocolMessageType('ModVrfArguments', (_message.Message,), dict(
   DESCRIPTOR = _MODVRFARGUMENTS,
   __module__ = 'gobgp_pb2'
   # @@protoc_insertion_point(class_scope:gobgpapi.ModVrfArguments)
   ))
 _sym_db.RegisterMessage(ModVrfArguments)
+
+ModDefinedSetArguments = _reflection.GeneratedProtocolMessageType('ModDefinedSetArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODDEFINEDSETARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModDefinedSetArguments)
+  ))
+_sym_db.RegisterMessage(ModDefinedSetArguments)
+
+ModStatementArguments = _reflection.GeneratedProtocolMessageType('ModStatementArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODSTATEMENTARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModStatementArguments)
+  ))
+_sym_db.RegisterMessage(ModStatementArguments)
+
+ModPolicyArguments = _reflection.GeneratedProtocolMessageType('ModPolicyArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODPOLICYARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModPolicyArguments)
+  ))
+_sym_db.RegisterMessage(ModPolicyArguments)
+
+ModPolicyAssignmentArguments = _reflection.GeneratedProtocolMessageType('ModPolicyAssignmentArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODPOLICYASSIGNMENTARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModPolicyAssignmentArguments)
+  ))
+_sym_db.RegisterMessage(ModPolicyAssignmentArguments)
+
+ModGlobalConfigArguments = _reflection.GeneratedProtocolMessageType('ModGlobalConfigArguments', (_message.Message,), dict(
+  DESCRIPTOR = _MODGLOBALCONFIGARGUMENTS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ModGlobalConfigArguments)
+  ))
+_sym_db.RegisterMessage(ModGlobalConfigArguments)
 
 Path = _reflection.GeneratedProtocolMessageType('Path', (_message.Message,), dict(
   DESCRIPTOR = _PATH,
@@ -1952,19 +3618,12 @@ Destination = _reflection.GeneratedProtocolMessageType('Destination', (_message.
   ))
 _sym_db.RegisterMessage(Destination)
 
-PeerConf = _reflection.GeneratedProtocolMessageType('PeerConf', (_message.Message,), dict(
-  DESCRIPTOR = _PEERCONF,
+Table = _reflection.GeneratedProtocolMessageType('Table', (_message.Message,), dict(
+  DESCRIPTOR = _TABLE,
   __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.PeerConf)
+  # @@protoc_insertion_point(class_scope:gobgpapi.Table)
   ))
-_sym_db.RegisterMessage(PeerConf)
-
-PeerInfo = _reflection.GeneratedProtocolMessageType('PeerInfo', (_message.Message,), dict(
-  DESCRIPTOR = _PEERINFO,
-  __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.PeerInfo)
-  ))
-_sym_db.RegisterMessage(PeerInfo)
+_sym_db.RegisterMessage(Table)
 
 Peer = _reflection.GeneratedProtocolMessageType('Peer', (_message.Message,), dict(
   DESCRIPTOR = _PEER,
@@ -1973,6 +3632,104 @@ Peer = _reflection.GeneratedProtocolMessageType('Peer', (_message.Message,), dic
   ))
 _sym_db.RegisterMessage(Peer)
 
+ApplyPolicy = _reflection.GeneratedProtocolMessageType('ApplyPolicy', (_message.Message,), dict(
+  DESCRIPTOR = _APPLYPOLICY,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.ApplyPolicy)
+  ))
+_sym_db.RegisterMessage(ApplyPolicy)
+
+PrefixLimit = _reflection.GeneratedProtocolMessageType('PrefixLimit', (_message.Message,), dict(
+  DESCRIPTOR = _PREFIXLIMIT,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.PrefixLimit)
+  ))
+_sym_db.RegisterMessage(PrefixLimit)
+
+PeerConf = _reflection.GeneratedProtocolMessageType('PeerConf', (_message.Message,), dict(
+  DESCRIPTOR = _PEERCONF,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.PeerConf)
+  ))
+_sym_db.RegisterMessage(PeerConf)
+
+EbgpMultihop = _reflection.GeneratedProtocolMessageType('EbgpMultihop', (_message.Message,), dict(
+  DESCRIPTOR = _EBGPMULTIHOP,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.EbgpMultihop)
+  ))
+_sym_db.RegisterMessage(EbgpMultihop)
+
+RouteReflector = _reflection.GeneratedProtocolMessageType('RouteReflector', (_message.Message,), dict(
+  DESCRIPTOR = _ROUTEREFLECTOR,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.RouteReflector)
+  ))
+_sym_db.RegisterMessage(RouteReflector)
+
+PeerState = _reflection.GeneratedProtocolMessageType('PeerState', (_message.Message,), dict(
+  DESCRIPTOR = _PEERSTATE,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.PeerState)
+  ))
+_sym_db.RegisterMessage(PeerState)
+
+Messages = _reflection.GeneratedProtocolMessageType('Messages', (_message.Message,), dict(
+  DESCRIPTOR = _MESSAGES,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.Messages)
+  ))
+_sym_db.RegisterMessage(Messages)
+
+Message = _reflection.GeneratedProtocolMessageType('Message', (_message.Message,), dict(
+  DESCRIPTOR = _MESSAGE,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.Message)
+  ))
+_sym_db.RegisterMessage(Message)
+
+Queues = _reflection.GeneratedProtocolMessageType('Queues', (_message.Message,), dict(
+  DESCRIPTOR = _QUEUES,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.Queues)
+  ))
+_sym_db.RegisterMessage(Queues)
+
+Timers = _reflection.GeneratedProtocolMessageType('Timers', (_message.Message,), dict(
+  DESCRIPTOR = _TIMERS,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.Timers)
+  ))
+_sym_db.RegisterMessage(Timers)
+
+TimersConfig = _reflection.GeneratedProtocolMessageType('TimersConfig', (_message.Message,), dict(
+  DESCRIPTOR = _TIMERSCONFIG,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.TimersConfig)
+  ))
+_sym_db.RegisterMessage(TimersConfig)
+
+TimersState = _reflection.GeneratedProtocolMessageType('TimersState', (_message.Message,), dict(
+  DESCRIPTOR = _TIMERSSTATE,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.TimersState)
+  ))
+_sym_db.RegisterMessage(TimersState)
+
+Transport = _reflection.GeneratedProtocolMessageType('Transport', (_message.Message,), dict(
+  DESCRIPTOR = _TRANSPORT,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.Transport)
+  ))
+_sym_db.RegisterMessage(Transport)
+
+RouteServer = _reflection.GeneratedProtocolMessageType('RouteServer', (_message.Message,), dict(
+  DESCRIPTOR = _ROUTESERVER,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.RouteServer)
+  ))
+_sym_db.RegisterMessage(RouteServer)
+
 Prefix = _reflection.GeneratedProtocolMessageType('Prefix', (_message.Message,), dict(
   DESCRIPTOR = _PREFIX,
   __module__ = 'gobgp_pb2'
@@ -1980,26 +3737,19 @@ Prefix = _reflection.GeneratedProtocolMessageType('Prefix', (_message.Message,),
   ))
 _sym_db.RegisterMessage(Prefix)
 
-PrefixSet = _reflection.GeneratedProtocolMessageType('PrefixSet', (_message.Message,), dict(
-  DESCRIPTOR = _PREFIXSET,
+DefinedSet = _reflection.GeneratedProtocolMessageType('DefinedSet', (_message.Message,), dict(
+  DESCRIPTOR = _DEFINEDSET,
   __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.PrefixSet)
+  # @@protoc_insertion_point(class_scope:gobgpapi.DefinedSet)
   ))
-_sym_db.RegisterMessage(PrefixSet)
+_sym_db.RegisterMessage(DefinedSet)
 
-Neighbor = _reflection.GeneratedProtocolMessageType('Neighbor', (_message.Message,), dict(
-  DESCRIPTOR = _NEIGHBOR,
+MatchSet = _reflection.GeneratedProtocolMessageType('MatchSet', (_message.Message,), dict(
+  DESCRIPTOR = _MATCHSET,
   __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.Neighbor)
+  # @@protoc_insertion_point(class_scope:gobgpapi.MatchSet)
   ))
-_sym_db.RegisterMessage(Neighbor)
-
-NeighborSet = _reflection.GeneratedProtocolMessageType('NeighborSet', (_message.Message,), dict(
-  DESCRIPTOR = _NEIGHBORSET,
-  __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.NeighborSet)
-  ))
-_sym_db.RegisterMessage(NeighborSet)
+_sym_db.RegisterMessage(MatchSet)
 
 AsPathLength = _reflection.GeneratedProtocolMessageType('AsPathLength', (_message.Message,), dict(
   DESCRIPTOR = _ASPATHLENGTH,
@@ -2007,27 +3757,6 @@ AsPathLength = _reflection.GeneratedProtocolMessageType('AsPathLength', (_messag
   # @@protoc_insertion_point(class_scope:gobgpapi.AsPathLength)
   ))
 _sym_db.RegisterMessage(AsPathLength)
-
-AsPathSet = _reflection.GeneratedProtocolMessageType('AsPathSet', (_message.Message,), dict(
-  DESCRIPTOR = _ASPATHSET,
-  __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.AsPathSet)
-  ))
-_sym_db.RegisterMessage(AsPathSet)
-
-CommunitySet = _reflection.GeneratedProtocolMessageType('CommunitySet', (_message.Message,), dict(
-  DESCRIPTOR = _COMMUNITYSET,
-  __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.CommunitySet)
-  ))
-_sym_db.RegisterMessage(CommunitySet)
-
-ExtCommunitySet = _reflection.GeneratedProtocolMessageType('ExtCommunitySet', (_message.Message,), dict(
-  DESCRIPTOR = _EXTCOMMUNITYSET,
-  __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.ExtCommunitySet)
-  ))
-_sym_db.RegisterMessage(ExtCommunitySet)
 
 Conditions = _reflection.GeneratedProtocolMessageType('Conditions', (_message.Message,), dict(
   DESCRIPTOR = _CONDITIONS,
@@ -2043,12 +3772,26 @@ CommunityAction = _reflection.GeneratedProtocolMessageType('CommunityAction', (_
   ))
 _sym_db.RegisterMessage(CommunityAction)
 
+MedAction = _reflection.GeneratedProtocolMessageType('MedAction', (_message.Message,), dict(
+  DESCRIPTOR = _MEDACTION,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.MedAction)
+  ))
+_sym_db.RegisterMessage(MedAction)
+
 AsPrependAction = _reflection.GeneratedProtocolMessageType('AsPrependAction', (_message.Message,), dict(
   DESCRIPTOR = _ASPREPENDACTION,
   __module__ = 'gobgp_pb2'
   # @@protoc_insertion_point(class_scope:gobgpapi.AsPrependAction)
   ))
 _sym_db.RegisterMessage(AsPrependAction)
+
+NexthopAction = _reflection.GeneratedProtocolMessageType('NexthopAction', (_message.Message,), dict(
+  DESCRIPTOR = _NEXTHOPACTION,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.NexthopAction)
+  ))
+_sym_db.RegisterMessage(NexthopAction)
 
 Actions = _reflection.GeneratedProtocolMessageType('Actions', (_message.Message,), dict(
   DESCRIPTOR = _ACTIONS,
@@ -2064,19 +3807,19 @@ Statement = _reflection.GeneratedProtocolMessageType('Statement', (_message.Mess
   ))
 _sym_db.RegisterMessage(Statement)
 
-PolicyDefinition = _reflection.GeneratedProtocolMessageType('PolicyDefinition', (_message.Message,), dict(
-  DESCRIPTOR = _POLICYDEFINITION,
+Policy = _reflection.GeneratedProtocolMessageType('Policy', (_message.Message,), dict(
+  DESCRIPTOR = _POLICY,
   __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.PolicyDefinition)
+  # @@protoc_insertion_point(class_scope:gobgpapi.Policy)
   ))
-_sym_db.RegisterMessage(PolicyDefinition)
+_sym_db.RegisterMessage(Policy)
 
-ApplyPolicy = _reflection.GeneratedProtocolMessageType('ApplyPolicy', (_message.Message,), dict(
-  DESCRIPTOR = _APPLYPOLICY,
+PolicyAssignment = _reflection.GeneratedProtocolMessageType('PolicyAssignment', (_message.Message,), dict(
+  DESCRIPTOR = _POLICYASSIGNMENT,
   __module__ = 'gobgp_pb2'
-  # @@protoc_insertion_point(class_scope:gobgpapi.ApplyPolicy)
+  # @@protoc_insertion_point(class_scope:gobgpapi.PolicyAssignment)
   ))
-_sym_db.RegisterMessage(ApplyPolicy)
+_sym_db.RegisterMessage(PolicyAssignment)
 
 MrtMessage = _reflection.GeneratedProtocolMessageType('MrtMessage', (_message.Message,), dict(
   DESCRIPTOR = _MRTMESSAGE,
@@ -2120,18 +3863,36 @@ Vrf = _reflection.GeneratedProtocolMessageType('Vrf', (_message.Message,), dict(
   ))
 _sym_db.RegisterMessage(Vrf)
 
+Global = _reflection.GeneratedProtocolMessageType('Global', (_message.Message,), dict(
+  DESCRIPTOR = _GLOBAL,
+  __module__ = 'gobgp_pb2'
+  # @@protoc_insertion_point(class_scope:gobgpapi.Global)
+  ))
+_sym_db.RegisterMessage(Global)
+
 
 import abc
-from grpc.early_adopter import implementations
-from grpc.framework.alpha import utilities
-class EarlyAdopterGobgpApiServicer(object):
+from grpc.beta import implementations as beta_implementations
+from grpc.framework.common import cardinality
+from grpc.framework.interfaces.face import utilities as face_utilities
+
+class BetaGobgpApiServicer(object):
   """<fill me in later!>"""
   __metaclass__ = abc.ABCMeta
+  @abc.abstractmethod
+  def GetGlobalConfig(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModGlobalConfig(self, request, context):
+    raise NotImplementedError()
   @abc.abstractmethod
   def GetNeighbors(self, request, context):
     raise NotImplementedError()
   @abc.abstractmethod
   def GetNeighbor(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModNeighbor(self, request, context):
     raise NotImplementedError()
   @abc.abstractmethod
   def GetRib(self, request, context):
@@ -2158,22 +3919,13 @@ class EarlyAdopterGobgpApiServicer(object):
   def Disable(self, request, context):
     raise NotImplementedError()
   @abc.abstractmethod
-  def ModPath(self, request_iterator, context):
+  def ModPath(self, request, context):
     raise NotImplementedError()
   @abc.abstractmethod
-  def GetNeighborPolicy(self, request, context):
+  def ModPaths(self, request_iterator, context):
     raise NotImplementedError()
   @abc.abstractmethod
-  def ModNeighborPolicy(self, request_iterator, context):
-    raise NotImplementedError()
-  @abc.abstractmethod
-  def GetPolicyRoutePolicies(self, request, context):
-    raise NotImplementedError()
-  @abc.abstractmethod
-  def GetPolicyRoutePolicy(self, request, context):
-    raise NotImplementedError()
-  @abc.abstractmethod
-  def ModPolicyRoutePolicy(self, request_iterator, context):
+  def MonitorRib(self, request, context):
     raise NotImplementedError()
   @abc.abstractmethod
   def MonitorBestChanged(self, request, context):
@@ -2185,7 +3937,16 @@ class EarlyAdopterGobgpApiServicer(object):
   def GetMrt(self, request, context):
     raise NotImplementedError()
   @abc.abstractmethod
+  def ModMrt(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModBmp(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
   def GetRPKI(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModRPKI(self, request, context):
     raise NotImplementedError()
   @abc.abstractmethod
   def GetROA(self, request, context):
@@ -2196,111 +3957,182 @@ class EarlyAdopterGobgpApiServicer(object):
   @abc.abstractmethod
   def ModVrf(self, request, context):
     raise NotImplementedError()
-class EarlyAdopterGobgpApiServer(object):
-  """<fill me in later!>"""
+  @abc.abstractmethod
+  def GetDefinedSet(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def GetDefinedSets(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModDefinedSet(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def GetStatement(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def GetStatements(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModStatement(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def GetPolicy(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def GetPolicies(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModPolicy(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def GetPolicyAssignment(self, request, context):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModPolicyAssignment(self, request, context):
+    raise NotImplementedError()
+
+class BetaGobgpApiStub(object):
+  """The interface to which stubs will conform."""
   __metaclass__ = abc.ABCMeta
   @abc.abstractmethod
-  def start(self):
+  def GetGlobalConfig(self, request, timeout):
+    raise NotImplementedError()
+  GetGlobalConfig.future = None
+  @abc.abstractmethod
+  def ModGlobalConfig(self, request, timeout):
+    raise NotImplementedError()
+  ModGlobalConfig.future = None
+  @abc.abstractmethod
+  def GetNeighbors(self, request, timeout):
     raise NotImplementedError()
   @abc.abstractmethod
-  def stop(self):
+  def GetNeighbor(self, request, timeout):
     raise NotImplementedError()
-class EarlyAdopterGobgpApiStub(object):
-  """<fill me in later!>"""
-  __metaclass__ = abc.ABCMeta
+  GetNeighbor.future = None
   @abc.abstractmethod
-  def GetNeighbors(self, request):
+  def ModNeighbor(self, request, timeout):
     raise NotImplementedError()
-  GetNeighbors.async = None
+  ModNeighbor.future = None
   @abc.abstractmethod
-  def GetNeighbor(self, request):
+  def GetRib(self, request, timeout):
     raise NotImplementedError()
-  GetNeighbor.async = None
+  GetRib.future = None
   @abc.abstractmethod
-  def GetRib(self, request):
+  def Reset(self, request, timeout):
     raise NotImplementedError()
-  GetRib.async = None
+  Reset.future = None
   @abc.abstractmethod
-  def Reset(self, request):
+  def SoftReset(self, request, timeout):
     raise NotImplementedError()
-  Reset.async = None
+  SoftReset.future = None
   @abc.abstractmethod
-  def SoftReset(self, request):
+  def SoftResetIn(self, request, timeout):
     raise NotImplementedError()
-  SoftReset.async = None
+  SoftResetIn.future = None
   @abc.abstractmethod
-  def SoftResetIn(self, request):
+  def SoftResetOut(self, request, timeout):
     raise NotImplementedError()
-  SoftResetIn.async = None
+  SoftResetOut.future = None
   @abc.abstractmethod
-  def SoftResetOut(self, request):
+  def Shutdown(self, request, timeout):
     raise NotImplementedError()
-  SoftResetOut.async = None
+  Shutdown.future = None
   @abc.abstractmethod
-  def Shutdown(self, request):
+  def Enable(self, request, timeout):
     raise NotImplementedError()
-  Shutdown.async = None
+  Enable.future = None
   @abc.abstractmethod
-  def Enable(self, request):
+  def Disable(self, request, timeout):
     raise NotImplementedError()
-  Enable.async = None
+  Disable.future = None
   @abc.abstractmethod
-  def Disable(self, request):
+  def ModPath(self, request, timeout):
     raise NotImplementedError()
-  Disable.async = None
+  ModPath.future = None
   @abc.abstractmethod
-  def ModPath(self, request_iterator):
+  def ModPaths(self, request_iterator, timeout):
     raise NotImplementedError()
-  ModPath.async = None
+  ModPaths.future = None
   @abc.abstractmethod
-  def GetNeighborPolicy(self, request):
+  def MonitorRib(self, request, timeout):
     raise NotImplementedError()
-  GetNeighborPolicy.async = None
   @abc.abstractmethod
-  def ModNeighborPolicy(self, request_iterator):
+  def MonitorBestChanged(self, request, timeout):
     raise NotImplementedError()
-  ModNeighborPolicy.async = None
   @abc.abstractmethod
-  def GetPolicyRoutePolicies(self, request):
+  def MonitorPeerState(self, request, timeout):
     raise NotImplementedError()
-  GetPolicyRoutePolicies.async = None
   @abc.abstractmethod
-  def GetPolicyRoutePolicy(self, request):
+  def GetMrt(self, request, timeout):
     raise NotImplementedError()
-  GetPolicyRoutePolicy.async = None
   @abc.abstractmethod
-  def ModPolicyRoutePolicy(self, request_iterator):
+  def ModMrt(self, request, timeout):
     raise NotImplementedError()
-  ModPolicyRoutePolicy.async = None
+  ModMrt.future = None
   @abc.abstractmethod
-  def MonitorBestChanged(self, request):
+  def ModBmp(self, request, timeout):
     raise NotImplementedError()
-  MonitorBestChanged.async = None
+  ModBmp.future = None
   @abc.abstractmethod
-  def MonitorPeerState(self, request):
+  def GetRPKI(self, request, timeout):
     raise NotImplementedError()
-  MonitorPeerState.async = None
   @abc.abstractmethod
-  def GetMrt(self, request):
+  def ModRPKI(self, request, timeout):
     raise NotImplementedError()
-  GetMrt.async = None
+  ModRPKI.future = None
   @abc.abstractmethod
-  def GetRPKI(self, request):
+  def GetROA(self, request, timeout):
     raise NotImplementedError()
-  GetRPKI.async = None
   @abc.abstractmethod
-  def GetROA(self, request):
+  def GetVrfs(self, request, timeout):
     raise NotImplementedError()
-  GetROA.async = None
   @abc.abstractmethod
-  def GetVrfs(self, request):
+  def ModVrf(self, request, timeout):
     raise NotImplementedError()
-  GetVrfs.async = None
+  ModVrf.future = None
   @abc.abstractmethod
-  def ModVrf(self, request):
+  def GetDefinedSet(self, request, timeout):
     raise NotImplementedError()
-  ModVrf.async = None
-def early_adopter_create_GobgpApi_server(servicer, port, private_key=None, certificate_chain=None):
+  GetDefinedSet.future = None
+  @abc.abstractmethod
+  def GetDefinedSets(self, request, timeout):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModDefinedSet(self, request, timeout):
+    raise NotImplementedError()
+  ModDefinedSet.future = None
+  @abc.abstractmethod
+  def GetStatement(self, request, timeout):
+    raise NotImplementedError()
+  GetStatement.future = None
+  @abc.abstractmethod
+  def GetStatements(self, request, timeout):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModStatement(self, request, timeout):
+    raise NotImplementedError()
+  ModStatement.future = None
+  @abc.abstractmethod
+  def GetPolicy(self, request, timeout):
+    raise NotImplementedError()
+  GetPolicy.future = None
+  @abc.abstractmethod
+  def GetPolicies(self, request, timeout):
+    raise NotImplementedError()
+  @abc.abstractmethod
+  def ModPolicy(self, request, timeout):
+    raise NotImplementedError()
+  ModPolicy.future = None
+  @abc.abstractmethod
+  def GetPolicyAssignment(self, request, timeout):
+    raise NotImplementedError()
+  GetPolicyAssignment.future = None
+  @abc.abstractmethod
+  def ModPolicyAssignment(self, request, timeout):
+    raise NotImplementedError()
+  ModPolicyAssignment.future = None
+
+def beta_create_GobgpApi_server(servicer, pool=None, pool_size=None, default_timeout=None, maximum_timeout=None):
   import gobgp_pb2
   import gobgp_pb2
   import gobgp_pb2
@@ -2347,264 +4179,346 @@ def early_adopter_create_GobgpApi_server(servicer, port, private_key=None, certi
   import gobgp_pb2
   import gobgp_pb2
   import gobgp_pb2
-  method_service_descriptions = {
-    "Disable": utilities.unary_unary_service_description(
-      servicer.Disable,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "Enable": utilities.unary_unary_service_description(
-      servicer.Enable,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "GetMrt": utilities.unary_stream_service_description(
-      servicer.GetMrt,
-      gobgp_pb2.MrtArguments.FromString,
-      gobgp_pb2.MrtMessage.SerializeToString,
-    ),
-    "GetNeighbor": utilities.unary_unary_service_description(
-      servicer.GetNeighbor,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Peer.SerializeToString,
-    ),
-    "GetNeighborPolicy": utilities.unary_unary_service_description(
-      servicer.GetNeighborPolicy,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.ApplyPolicy.SerializeToString,
-    ),
-    "GetNeighbors": utilities.unary_stream_service_description(
-      servicer.GetNeighbors,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Peer.SerializeToString,
-    ),
-    "GetPolicyRoutePolicies": utilities.unary_stream_service_description(
-      servicer.GetPolicyRoutePolicies,
-      gobgp_pb2.PolicyArguments.FromString,
-      gobgp_pb2.PolicyDefinition.SerializeToString,
-    ),
-    "GetPolicyRoutePolicy": utilities.unary_unary_service_description(
-      servicer.GetPolicyRoutePolicy,
-      gobgp_pb2.PolicyArguments.FromString,
-      gobgp_pb2.PolicyDefinition.SerializeToString,
-    ),
-    "GetROA": utilities.unary_stream_service_description(
-      servicer.GetROA,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.ROA.SerializeToString,
-    ),
-    "GetRPKI": utilities.unary_stream_service_description(
-      servicer.GetRPKI,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.RPKI.SerializeToString,
-    ),
-    "GetRib": utilities.unary_stream_service_description(
-      servicer.GetRib,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Destination.SerializeToString,
-    ),
-    "GetVrfs": utilities.unary_stream_service_description(
-      servicer.GetVrfs,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Vrf.SerializeToString,
-    ),
-    "ModNeighborPolicy": utilities.stream_stream_service_description(
-      servicer.ModNeighborPolicy,
-      gobgp_pb2.PolicyArguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "ModPath": utilities.stream_unary_service_description(
-      servicer.ModPath,
-      gobgp_pb2.ModPathArguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "ModPolicyRoutePolicy": utilities.stream_stream_service_description(
-      servicer.ModPolicyRoutePolicy,
-      gobgp_pb2.PolicyArguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "ModVrf": utilities.unary_unary_service_description(
-      servicer.ModVrf,
-      gobgp_pb2.ModVrfArguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "MonitorBestChanged": utilities.unary_stream_service_description(
-      servicer.MonitorBestChanged,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Destination.SerializeToString,
-    ),
-    "MonitorPeerState": utilities.unary_stream_service_description(
-      servicer.MonitorPeerState,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Peer.SerializeToString,
-    ),
-    "Reset": utilities.unary_unary_service_description(
-      servicer.Reset,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "Shutdown": utilities.unary_unary_service_description(
-      servicer.Shutdown,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "SoftReset": utilities.unary_unary_service_description(
-      servicer.SoftReset,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "SoftResetIn": utilities.unary_unary_service_description(
-      servicer.SoftResetIn,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
-    "SoftResetOut": utilities.unary_unary_service_description(
-      servicer.SoftResetOut,
-      gobgp_pb2.Arguments.FromString,
-      gobgp_pb2.Error.SerializeToString,
-    ),
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  request_deserializers = {
+    ('gobgpapi.GobgpApi', 'Disable'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'Enable'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'GetDefinedSet'): gobgp_pb2.DefinedSet.FromString,
+    ('gobgpapi.GobgpApi', 'GetDefinedSets'): gobgp_pb2.DefinedSet.FromString,
+    ('gobgpapi.GobgpApi', 'GetGlobalConfig'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'GetMrt'): gobgp_pb2.MrtArguments.FromString,
+    ('gobgpapi.GobgpApi', 'GetNeighbor'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'GetNeighbors'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'GetPolicies'): gobgp_pb2.Policy.FromString,
+    ('gobgpapi.GobgpApi', 'GetPolicy'): gobgp_pb2.Policy.FromString,
+    ('gobgpapi.GobgpApi', 'GetPolicyAssignment'): gobgp_pb2.PolicyAssignment.FromString,
+    ('gobgpapi.GobgpApi', 'GetROA'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'GetRPKI'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'GetRib'): gobgp_pb2.Table.FromString,
+    ('gobgpapi.GobgpApi', 'GetStatement'): gobgp_pb2.Statement.FromString,
+    ('gobgpapi.GobgpApi', 'GetStatements'): gobgp_pb2.Statement.FromString,
+    ('gobgpapi.GobgpApi', 'GetVrfs'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModBmp'): gobgp_pb2.ModBmpArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModDefinedSet'): gobgp_pb2.ModDefinedSetArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModGlobalConfig'): gobgp_pb2.ModGlobalConfigArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModMrt'): gobgp_pb2.ModMrtArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModNeighbor'): gobgp_pb2.ModNeighborArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModPath'): gobgp_pb2.ModPathArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModPaths'): gobgp_pb2.ModPathsArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModPolicy'): gobgp_pb2.ModPolicyArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModPolicyAssignment'): gobgp_pb2.ModPolicyAssignmentArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModRPKI'): gobgp_pb2.ModRpkiArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModStatement'): gobgp_pb2.ModStatementArguments.FromString,
+    ('gobgpapi.GobgpApi', 'ModVrf'): gobgp_pb2.ModVrfArguments.FromString,
+    ('gobgpapi.GobgpApi', 'MonitorBestChanged'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'MonitorPeerState'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'MonitorRib'): gobgp_pb2.Table.FromString,
+    ('gobgpapi.GobgpApi', 'Reset'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'Shutdown'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'SoftReset'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'SoftResetIn'): gobgp_pb2.Arguments.FromString,
+    ('gobgpapi.GobgpApi', 'SoftResetOut'): gobgp_pb2.Arguments.FromString,
   }
-  return implementations.server("gobgpapi.GobgpApi", method_service_descriptions, port, private_key=private_key, certificate_chain=certificate_chain)
-def early_adopter_create_GobgpApi_stub(host, port, metadata_transformer=None, secure=False, root_certificates=None, private_key=None, certificate_chain=None, server_host_override=None):
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  import gobgp_pb2
-  method_invocation_descriptions = {
-    "Disable": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "Enable": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "GetMrt": utilities.unary_stream_invocation_description(
-      gobgp_pb2.MrtArguments.SerializeToString,
-      gobgp_pb2.MrtMessage.FromString,
-    ),
-    "GetNeighbor": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Peer.FromString,
-    ),
-    "GetNeighborPolicy": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.ApplyPolicy.FromString,
-    ),
-    "GetNeighbors": utilities.unary_stream_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Peer.FromString,
-    ),
-    "GetPolicyRoutePolicies": utilities.unary_stream_invocation_description(
-      gobgp_pb2.PolicyArguments.SerializeToString,
-      gobgp_pb2.PolicyDefinition.FromString,
-    ),
-    "GetPolicyRoutePolicy": utilities.unary_unary_invocation_description(
-      gobgp_pb2.PolicyArguments.SerializeToString,
-      gobgp_pb2.PolicyDefinition.FromString,
-    ),
-    "GetROA": utilities.unary_stream_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.ROA.FromString,
-    ),
-    "GetRPKI": utilities.unary_stream_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.RPKI.FromString,
-    ),
-    "GetRib": utilities.unary_stream_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Destination.FromString,
-    ),
-    "GetVrfs": utilities.unary_stream_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Vrf.FromString,
-    ),
-    "ModNeighborPolicy": utilities.stream_stream_invocation_description(
-      gobgp_pb2.PolicyArguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "ModPath": utilities.stream_unary_invocation_description(
-      gobgp_pb2.ModPathArguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "ModPolicyRoutePolicy": utilities.stream_stream_invocation_description(
-      gobgp_pb2.PolicyArguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "ModVrf": utilities.unary_unary_invocation_description(
-      gobgp_pb2.ModVrfArguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "MonitorBestChanged": utilities.unary_stream_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Destination.FromString,
-    ),
-    "MonitorPeerState": utilities.unary_stream_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Peer.FromString,
-    ),
-    "Reset": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "Shutdown": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "SoftReset": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "SoftResetIn": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
-    "SoftResetOut": utilities.unary_unary_invocation_description(
-      gobgp_pb2.Arguments.SerializeToString,
-      gobgp_pb2.Error.FromString,
-    ),
+  response_serializers = {
+    ('gobgpapi.GobgpApi', 'Disable'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'Enable'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetDefinedSet'): gobgp_pb2.DefinedSet.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetDefinedSets'): gobgp_pb2.DefinedSet.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetGlobalConfig'): gobgp_pb2.Global.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetMrt'): gobgp_pb2.MrtMessage.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetNeighbor'): gobgp_pb2.Peer.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetNeighbors'): gobgp_pb2.Peer.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetPolicies'): gobgp_pb2.Policy.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetPolicy'): gobgp_pb2.Policy.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetPolicyAssignment'): gobgp_pb2.PolicyAssignment.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetROA'): gobgp_pb2.ROA.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetRPKI'): gobgp_pb2.RPKI.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetRib'): gobgp_pb2.Table.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetStatement'): gobgp_pb2.Statement.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetStatements'): gobgp_pb2.Statement.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetVrfs'): gobgp_pb2.Vrf.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModBmp'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModDefinedSet'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModGlobalConfig'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModMrt'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModNeighbor'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModPath'): gobgp_pb2.ModPathResponse.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModPaths'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModPolicy'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModPolicyAssignment'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModRPKI'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModStatement'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModVrf'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'MonitorBestChanged'): gobgp_pb2.Destination.SerializeToString,
+    ('gobgpapi.GobgpApi', 'MonitorPeerState'): gobgp_pb2.Peer.SerializeToString,
+    ('gobgpapi.GobgpApi', 'MonitorRib'): gobgp_pb2.Destination.SerializeToString,
+    ('gobgpapi.GobgpApi', 'Reset'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'Shutdown'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'SoftReset'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'SoftResetIn'): gobgp_pb2.Error.SerializeToString,
+    ('gobgpapi.GobgpApi', 'SoftResetOut'): gobgp_pb2.Error.SerializeToString,
   }
-  return implementations.stub("gobgpapi.GobgpApi", method_invocation_descriptions, host, port, metadata_transformer=metadata_transformer, secure=secure, root_certificates=root_certificates, private_key=private_key, certificate_chain=certificate_chain, server_host_override=server_host_override)
+  method_implementations = {
+    ('gobgpapi.GobgpApi', 'Disable'): face_utilities.unary_unary_inline(servicer.Disable),
+    ('gobgpapi.GobgpApi', 'Enable'): face_utilities.unary_unary_inline(servicer.Enable),
+    ('gobgpapi.GobgpApi', 'GetDefinedSet'): face_utilities.unary_unary_inline(servicer.GetDefinedSet),
+    ('gobgpapi.GobgpApi', 'GetDefinedSets'): face_utilities.unary_stream_inline(servicer.GetDefinedSets),
+    ('gobgpapi.GobgpApi', 'GetGlobalConfig'): face_utilities.unary_unary_inline(servicer.GetGlobalConfig),
+    ('gobgpapi.GobgpApi', 'GetMrt'): face_utilities.unary_stream_inline(servicer.GetMrt),
+    ('gobgpapi.GobgpApi', 'GetNeighbor'): face_utilities.unary_unary_inline(servicer.GetNeighbor),
+    ('gobgpapi.GobgpApi', 'GetNeighbors'): face_utilities.unary_stream_inline(servicer.GetNeighbors),
+    ('gobgpapi.GobgpApi', 'GetPolicies'): face_utilities.unary_stream_inline(servicer.GetPolicies),
+    ('gobgpapi.GobgpApi', 'GetPolicy'): face_utilities.unary_unary_inline(servicer.GetPolicy),
+    ('gobgpapi.GobgpApi', 'GetPolicyAssignment'): face_utilities.unary_unary_inline(servicer.GetPolicyAssignment),
+    ('gobgpapi.GobgpApi', 'GetROA'): face_utilities.unary_stream_inline(servicer.GetROA),
+    ('gobgpapi.GobgpApi', 'GetRPKI'): face_utilities.unary_stream_inline(servicer.GetRPKI),
+    ('gobgpapi.GobgpApi', 'GetRib'): face_utilities.unary_unary_inline(servicer.GetRib),
+    ('gobgpapi.GobgpApi', 'GetStatement'): face_utilities.unary_unary_inline(servicer.GetStatement),
+    ('gobgpapi.GobgpApi', 'GetStatements'): face_utilities.unary_stream_inline(servicer.GetStatements),
+    ('gobgpapi.GobgpApi', 'GetVrfs'): face_utilities.unary_stream_inline(servicer.GetVrfs),
+    ('gobgpapi.GobgpApi', 'ModBmp'): face_utilities.unary_unary_inline(servicer.ModBmp),
+    ('gobgpapi.GobgpApi', 'ModDefinedSet'): face_utilities.unary_unary_inline(servicer.ModDefinedSet),
+    ('gobgpapi.GobgpApi', 'ModGlobalConfig'): face_utilities.unary_unary_inline(servicer.ModGlobalConfig),
+    ('gobgpapi.GobgpApi', 'ModMrt'): face_utilities.unary_unary_inline(servicer.ModMrt),
+    ('gobgpapi.GobgpApi', 'ModNeighbor'): face_utilities.unary_unary_inline(servicer.ModNeighbor),
+    ('gobgpapi.GobgpApi', 'ModPath'): face_utilities.unary_unary_inline(servicer.ModPath),
+    ('gobgpapi.GobgpApi', 'ModPaths'): face_utilities.stream_unary_inline(servicer.ModPaths),
+    ('gobgpapi.GobgpApi', 'ModPolicy'): face_utilities.unary_unary_inline(servicer.ModPolicy),
+    ('gobgpapi.GobgpApi', 'ModPolicyAssignment'): face_utilities.unary_unary_inline(servicer.ModPolicyAssignment),
+    ('gobgpapi.GobgpApi', 'ModRPKI'): face_utilities.unary_unary_inline(servicer.ModRPKI),
+    ('gobgpapi.GobgpApi', 'ModStatement'): face_utilities.unary_unary_inline(servicer.ModStatement),
+    ('gobgpapi.GobgpApi', 'ModVrf'): face_utilities.unary_unary_inline(servicer.ModVrf),
+    ('gobgpapi.GobgpApi', 'MonitorBestChanged'): face_utilities.unary_stream_inline(servicer.MonitorBestChanged),
+    ('gobgpapi.GobgpApi', 'MonitorPeerState'): face_utilities.unary_stream_inline(servicer.MonitorPeerState),
+    ('gobgpapi.GobgpApi', 'MonitorRib'): face_utilities.unary_stream_inline(servicer.MonitorRib),
+    ('gobgpapi.GobgpApi', 'Reset'): face_utilities.unary_unary_inline(servicer.Reset),
+    ('gobgpapi.GobgpApi', 'Shutdown'): face_utilities.unary_unary_inline(servicer.Shutdown),
+    ('gobgpapi.GobgpApi', 'SoftReset'): face_utilities.unary_unary_inline(servicer.SoftReset),
+    ('gobgpapi.GobgpApi', 'SoftResetIn'): face_utilities.unary_unary_inline(servicer.SoftResetIn),
+    ('gobgpapi.GobgpApi', 'SoftResetOut'): face_utilities.unary_unary_inline(servicer.SoftResetOut),
+  }
+  server_options = beta_implementations.server_options(request_deserializers=request_deserializers, response_serializers=response_serializers, thread_pool=pool, thread_pool_size=pool_size, default_timeout=default_timeout, maximum_timeout=maximum_timeout)
+  return beta_implementations.server(method_implementations, options=server_options)
+
+def beta_create_GobgpApi_stub(channel, host=None, metadata_transformer=None, pool=None, pool_size=None):
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  import gobgp_pb2
+  request_serializers = {
+    ('gobgpapi.GobgpApi', 'Disable'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'Enable'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetDefinedSet'): gobgp_pb2.DefinedSet.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetDefinedSets'): gobgp_pb2.DefinedSet.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetGlobalConfig'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetMrt'): gobgp_pb2.MrtArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetNeighbor'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetNeighbors'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetPolicies'): gobgp_pb2.Policy.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetPolicy'): gobgp_pb2.Policy.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetPolicyAssignment'): gobgp_pb2.PolicyAssignment.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetROA'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetRPKI'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetRib'): gobgp_pb2.Table.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetStatement'): gobgp_pb2.Statement.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetStatements'): gobgp_pb2.Statement.SerializeToString,
+    ('gobgpapi.GobgpApi', 'GetVrfs'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModBmp'): gobgp_pb2.ModBmpArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModDefinedSet'): gobgp_pb2.ModDefinedSetArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModGlobalConfig'): gobgp_pb2.ModGlobalConfigArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModMrt'): gobgp_pb2.ModMrtArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModNeighbor'): gobgp_pb2.ModNeighborArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModPath'): gobgp_pb2.ModPathArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModPaths'): gobgp_pb2.ModPathsArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModPolicy'): gobgp_pb2.ModPolicyArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModPolicyAssignment'): gobgp_pb2.ModPolicyAssignmentArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModRPKI'): gobgp_pb2.ModRpkiArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModStatement'): gobgp_pb2.ModStatementArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'ModVrf'): gobgp_pb2.ModVrfArguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'MonitorBestChanged'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'MonitorPeerState'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'MonitorRib'): gobgp_pb2.Table.SerializeToString,
+    ('gobgpapi.GobgpApi', 'Reset'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'Shutdown'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'SoftReset'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'SoftResetIn'): gobgp_pb2.Arguments.SerializeToString,
+    ('gobgpapi.GobgpApi', 'SoftResetOut'): gobgp_pb2.Arguments.SerializeToString,
+  }
+  response_deserializers = {
+    ('gobgpapi.GobgpApi', 'Disable'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'Enable'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'GetDefinedSet'): gobgp_pb2.DefinedSet.FromString,
+    ('gobgpapi.GobgpApi', 'GetDefinedSets'): gobgp_pb2.DefinedSet.FromString,
+    ('gobgpapi.GobgpApi', 'GetGlobalConfig'): gobgp_pb2.Global.FromString,
+    ('gobgpapi.GobgpApi', 'GetMrt'): gobgp_pb2.MrtMessage.FromString,
+    ('gobgpapi.GobgpApi', 'GetNeighbor'): gobgp_pb2.Peer.FromString,
+    ('gobgpapi.GobgpApi', 'GetNeighbors'): gobgp_pb2.Peer.FromString,
+    ('gobgpapi.GobgpApi', 'GetPolicies'): gobgp_pb2.Policy.FromString,
+    ('gobgpapi.GobgpApi', 'GetPolicy'): gobgp_pb2.Policy.FromString,
+    ('gobgpapi.GobgpApi', 'GetPolicyAssignment'): gobgp_pb2.PolicyAssignment.FromString,
+    ('gobgpapi.GobgpApi', 'GetROA'): gobgp_pb2.ROA.FromString,
+    ('gobgpapi.GobgpApi', 'GetRPKI'): gobgp_pb2.RPKI.FromString,
+    ('gobgpapi.GobgpApi', 'GetRib'): gobgp_pb2.Table.FromString,
+    ('gobgpapi.GobgpApi', 'GetStatement'): gobgp_pb2.Statement.FromString,
+    ('gobgpapi.GobgpApi', 'GetStatements'): gobgp_pb2.Statement.FromString,
+    ('gobgpapi.GobgpApi', 'GetVrfs'): gobgp_pb2.Vrf.FromString,
+    ('gobgpapi.GobgpApi', 'ModBmp'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModDefinedSet'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModGlobalConfig'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModMrt'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModNeighbor'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModPath'): gobgp_pb2.ModPathResponse.FromString,
+    ('gobgpapi.GobgpApi', 'ModPaths'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModPolicy'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModPolicyAssignment'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModRPKI'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModStatement'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'ModVrf'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'MonitorBestChanged'): gobgp_pb2.Destination.FromString,
+    ('gobgpapi.GobgpApi', 'MonitorPeerState'): gobgp_pb2.Peer.FromString,
+    ('gobgpapi.GobgpApi', 'MonitorRib'): gobgp_pb2.Destination.FromString,
+    ('gobgpapi.GobgpApi', 'Reset'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'Shutdown'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'SoftReset'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'SoftResetIn'): gobgp_pb2.Error.FromString,
+    ('gobgpapi.GobgpApi', 'SoftResetOut'): gobgp_pb2.Error.FromString,
+  }
+  cardinalities = {
+    'Disable': cardinality.Cardinality.UNARY_UNARY,
+    'Enable': cardinality.Cardinality.UNARY_UNARY,
+    'GetDefinedSet': cardinality.Cardinality.UNARY_UNARY,
+    'GetDefinedSets': cardinality.Cardinality.UNARY_STREAM,
+    'GetGlobalConfig': cardinality.Cardinality.UNARY_UNARY,
+    'GetMrt': cardinality.Cardinality.UNARY_STREAM,
+    'GetNeighbor': cardinality.Cardinality.UNARY_UNARY,
+    'GetNeighbors': cardinality.Cardinality.UNARY_STREAM,
+    'GetPolicies': cardinality.Cardinality.UNARY_STREAM,
+    'GetPolicy': cardinality.Cardinality.UNARY_UNARY,
+    'GetPolicyAssignment': cardinality.Cardinality.UNARY_UNARY,
+    'GetROA': cardinality.Cardinality.UNARY_STREAM,
+    'GetRPKI': cardinality.Cardinality.UNARY_STREAM,
+    'GetRib': cardinality.Cardinality.UNARY_UNARY,
+    'GetStatement': cardinality.Cardinality.UNARY_UNARY,
+    'GetStatements': cardinality.Cardinality.UNARY_STREAM,
+    'GetVrfs': cardinality.Cardinality.UNARY_STREAM,
+    'ModBmp': cardinality.Cardinality.UNARY_UNARY,
+    'ModDefinedSet': cardinality.Cardinality.UNARY_UNARY,
+    'ModGlobalConfig': cardinality.Cardinality.UNARY_UNARY,
+    'ModMrt': cardinality.Cardinality.UNARY_UNARY,
+    'ModNeighbor': cardinality.Cardinality.UNARY_UNARY,
+    'ModPath': cardinality.Cardinality.UNARY_UNARY,
+    'ModPaths': cardinality.Cardinality.STREAM_UNARY,
+    'ModPolicy': cardinality.Cardinality.UNARY_UNARY,
+    'ModPolicyAssignment': cardinality.Cardinality.UNARY_UNARY,
+    'ModRPKI': cardinality.Cardinality.UNARY_UNARY,
+    'ModStatement': cardinality.Cardinality.UNARY_UNARY,
+    'ModVrf': cardinality.Cardinality.UNARY_UNARY,
+    'MonitorBestChanged': cardinality.Cardinality.UNARY_STREAM,
+    'MonitorPeerState': cardinality.Cardinality.UNARY_STREAM,
+    'MonitorRib': cardinality.Cardinality.UNARY_STREAM,
+    'Reset': cardinality.Cardinality.UNARY_UNARY,
+    'Shutdown': cardinality.Cardinality.UNARY_UNARY,
+    'SoftReset': cardinality.Cardinality.UNARY_UNARY,
+    'SoftResetIn': cardinality.Cardinality.UNARY_UNARY,
+    'SoftResetOut': cardinality.Cardinality.UNARY_UNARY,
+  }
+  stub_options = beta_implementations.stub_options(host=host, metadata_transformer=metadata_transformer, request_serializers=request_serializers, response_deserializers=response_deserializers, thread_pool=pool, thread_pool_size=pool_size)
+  return beta_implementations.dynamic_stub(channel, 'gobgpapi.GobgpApi', cardinalities, options=stub_options)
 # @@protoc_insertion_point(module_scope)

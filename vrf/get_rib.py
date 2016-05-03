@@ -8,6 +8,7 @@ from ryu.lib.packet.bgp import BGPPathAttributeAsPath
 from ryu.lib.packet.bgp import BGPPathAttributeMultiExitDisc
 from ryu.lib.packet.bgp import BGPPathAttributeExtendedCommunities
 from ryu.lib.packet.bgp import BGPTwoOctetAsSpecificExtendedCommunity
+from grpc.beta import implementations
 
 _TIMEOUT_SECONDS = 10
 Resource_VRF = 4
@@ -22,12 +23,15 @@ RF_IPv4_VPN = AFI_IP<<16 | SAFI_MPLS_VPN
 RF_IPv4_UC = 65537
 
 def run(gobgpd_addr, vrf_name):
-    with gobgp_pb2.early_adopter_create_GobgpApi_stub(gobgpd_addr, 8080) as stub:
-        ribs = stub.GetRib(gobgp_pb2.Arguments(resource=Resource_VRF, rf=RF_IPv4_UC, name=vrf_name), _TIMEOUT_SECONDS)
-        for rib in ribs:
+    channel = implementations.insecure_channel(gobgpd_addr, 50051)
+    with gobgp_pb2.beta_create_GobgpApi_stub(channel) as stub:
+        rib = stub.GetRib(gobgp_pb2.Table(type=Resource_VRF, family=RF_IPv4_UC, name=vrf_name), _TIMEOUT_SECONDS)
 
-            paths_target = rib.paths
+        destinations_target = rib.destinations
+        for destination_target in destinations_target:
+            paths_target = destination_target.paths
             for path_target in paths_target:
+
                 nlri = LabelledVPNIPAddrPrefix.parser(path_target.nlri)
                 print (" Rib.prefix     : %s" % nlri[0].prefix)
                 print (" Rib.route_dist : %s" % nlri[0].route_dist)
@@ -47,7 +51,7 @@ def run(gobgpd_addr, vrf_name):
                         for community in path_attr[0].communities:
                             if isinstance(community, BGPTwoOctetAsSpecificExtendedCommunity):
                                 print(" Rib.community  : %s:%s" % ( community.as_number,
-                                                                    community.local_administrator))
+                                                                   community.local_administrator))
                             else:
                                 print(" Rib.community  : ???")
                     elif isinstance(path_attr[0], BGPPathAttributeMpReachNLRI):

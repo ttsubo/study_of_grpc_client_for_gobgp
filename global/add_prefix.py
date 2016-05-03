@@ -4,13 +4,15 @@ from netaddr.ip import IPNetwork
 from ryu.lib.packet.bgp import BGPPathAttributeOrigin
 from ryu.lib.packet.bgp import IPAddrPrefix
 from ryu.lib.packet.bgp import BGPPathAttributeNextHop
+from grpc.beta import implementations
 
 
 _TIMEOUT_SECONDS = 10
 Resource_GLOBAL  = 0
 
 def run(gobgpd_addr, prefix, nexthop):
-    with gobgp_pb2.early_adopter_create_GobgpApi_stub(gobgpd_addr, 8080) as stub:
+    channel = implementations.insecure_channel(gobgpd_addr, 50051)
+    with gobgp_pb2.beta_create_GobgpApi_stub(channel) as stub:
 
         subnet = IPNetwork(prefix)
         ipaddr = subnet.ip
@@ -33,14 +35,9 @@ def run(gobgpd_addr, prefix, nexthop):
         path['nlri'] = str(bin_nlri)
         path['pattrs'] = pattrs
 
-        paths = []
-        paths.append(path)
+        uuid = stub.ModPath(gobgp_pb2.ModPathArguments(resource=Resource_GLOBAL, path=path), _TIMEOUT_SECONDS)
 
-        args = []
-        args.append(gobgp_pb2.ModPathArguments(resource=Resource_GLOBAL, paths=paths))
-        ret = stub.ModPath(args, _TIMEOUT_SECONDS)
-
-        if ret.code == 0:
+        if uuid:
             print "Success!"
         else:
             print "Error!"

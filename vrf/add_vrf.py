@@ -4,13 +4,16 @@ from ryu.lib.packet.bgp import BGPTwoOctetAsRD
 from ryu.lib.packet.bgp import BGPTwoOctetAsSpecificExtendedCommunity
 from ryu.lib.packet.bgp import _RouteDistinguisher
 from ryu.lib.packet.bgp import _ExtendedCommunity
+from grpc.beta import implementations
 
 
 _TIMEOUT_SECONDS = 10
 Operation_ADD = 0
 
 def run(gobgpd_addr, vrf_name, route_dist, import_rt, export_rt):
-    with gobgp_pb2.early_adopter_create_GobgpApi_stub(gobgpd_addr, 8080) as stub:
+    channel = implementations.insecure_channel(gobgpd_addr, 50051)
+    with gobgp_pb2.beta_create_GobgpApi_stub(channel) as stub:
+
         bin_rd = str_to_bin_for_rd(route_dist)
         import_rts = []
         bin_import_rt = str_to_bin_for_rt(import_rt)

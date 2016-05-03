@@ -3,11 +3,13 @@ import sys
 from ryu.lib.packet.bgp import _RouteDistinguisher
 from ryu.lib.packet.bgp import _ExtendedCommunity
 from ryu.lib.packet.bgp import BGPTwoOctetAsSpecificExtendedCommunity
+from grpc.beta import implementations
 
 _TIMEOUT_SECONDS = 10
 
 def run(gobgpd_addr):
-    with gobgp_pb2.early_adopter_create_GobgpApi_stub(gobgpd_addr, 8080) as stub:
+    channel = implementations.insecure_channel(gobgpd_addr, 50051)
+    with gobgp_pb2.beta_create_GobgpApi_stub(channel) as stub:
         vrfs = stub.GetVrfs(gobgp_pb2.Arguments(), _TIMEOUT_SECONDS)
         for vrf in vrfs:
             print(" Vrf.name : %s" % ( vrf.name))

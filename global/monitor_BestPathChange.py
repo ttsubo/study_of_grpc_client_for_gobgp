@@ -11,6 +11,7 @@ from ryu.lib.packet.bgp import BGPPathAttributeAsPath
 from ryu.lib.packet.bgp import BGPPathAttributeMultiExitDisc
 from ryu.lib.packet.bgp import BGPPathAttributeNextHop
 from ryu.lib.packet.bgp import BGPPathAttributeCommunities
+from grpc.beta import implementations
 
 _TIMEOUT_SECONDS = 1000
 
@@ -19,9 +20,10 @@ SAFI_UNICAST = 1
 RF_IPv4_UC = AFI_IP<<16 | SAFI_UNICAST
 
 def run(gobgpd_addr, routefamily):
-    with gobgp_pb2.early_adopter_create_GobgpApi_stub(gobgpd_addr, 8080) as stub:
+    channel = implementations.insecure_channel(gobgpd_addr, 50051)
+    with gobgp_pb2.beta_create_GobgpApi_stub(channel) as stub:
 
-        ribs = stub.MonitorBestChanged(gobgp_pb2.Arguments(rf=routefamily),
+        ribs = stub.MonitorBestChanged(gobgp_pb2.Arguments(family=routefamily),
                                                            _TIMEOUT_SECONDS)
 
         for rib in ribs:
@@ -57,8 +59,8 @@ def receive_signal(signum, stack):
 
 if __name__ == '__main__':
     gobgp = sys.argv[1]
-    rf = sys.argv[2]
-    if rf == "ipv4":
+    family = sys.argv[2]
+    if family == "ipv4":
         routefamily = RF_IPv4_UC 
     else:
         exit(1)
@@ -72,5 +74,3 @@ if __name__ == '__main__':
     # sleep 1 sec forever to keep main thread alive
     while True:
         time.sleep(1)
-
-

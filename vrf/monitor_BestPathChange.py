@@ -12,6 +12,7 @@ from ryu.lib.packet.bgp import BGPPathAttributeAsPath
 from ryu.lib.packet.bgp import BGPPathAttributeMultiExitDisc
 from ryu.lib.packet.bgp import BGPPathAttributeExtendedCommunities
 from ryu.lib.packet.bgp import BGPTwoOctetAsSpecificExtendedCommunity
+from grpc.beta import implementations
 
 _TIMEOUT_SECONDS = 1000
 
@@ -22,14 +23,13 @@ RF_IPv4_UC = AFI_IP<<16 | SAFI_UNICAST
 RF_IPv4_VPN = AFI_IP<<16 | SAFI_MPLS_VPN
 
 def run(gobgpd_addr, routefamily):
-    with gobgp_pb2.early_adopter_create_GobgpApi_stub(gobgpd_addr, 8080) as stub:
+    channel = implementations.insecure_channel(gobgpd_addr, 50051)
+    with gobgp_pb2.beta_create_GobgpApi_stub(channel) as stub:
 
         if routefamily:
-            ribs = stub.MonitorBestChanged(gobgp_pb2.Arguments(rf=routefamily),
-                                                           _TIMEOUT_SECONDS)
+            ribs = stub.MonitorBestChanged(gobgp_pb2.Arguments(family=routefamily), _TIMEOUT_SECONDS)
         else:
-            ribs = stub.MonitorBestChanged(gobgp_pb2.Arguments(),
-                                                           _TIMEOUT_SECONDS)
+            ribs = stub.MonitorBestChanged(gobgp_pb2.Arguments(), _TIMEOUT_SECONDS)
 
         for rib in ribs:
             paths_target = rib.paths
